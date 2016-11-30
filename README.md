@@ -16,7 +16,7 @@ npm install
 npm run dev
 ```
 
-how to update vue:
+### how to update vue:
 --those two come together you schould have same version
 ```
 npm install vue 
