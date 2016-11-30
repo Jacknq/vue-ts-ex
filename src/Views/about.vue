@@ -1,6 +1,6 @@
 <template>
     <div>
-This is ABOUT template..{{someabout}}  
+         This is ABOUT template..{{someabout}}  
 </br>
 <input type="text"  v-model="someabout">
     </div>
@@ -12,7 +12,6 @@ import {Component, create, getHelper,Vue,Vuex }  from '../ext'
       name: 'aboutname'
  })
 export default class extends Vue {
-    someabout = 'about'
-     name  =  'aboutname'
+    someabout = 'about'    
 }
 </script>
