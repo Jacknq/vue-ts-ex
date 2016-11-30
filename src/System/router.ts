@@ -32,7 +32,8 @@ const router = new VueRouter({
   routes: [
 
     { path: '/' },
-    { path: '/ts/:id(\\d+)', component: separatets },
+    { path: '/ts', component: separatets },
+   // { path: '/ts/:id(\\d+)', component: separatets },
     { path: '/about', component: about },
 
     { path: '/module/:compname' },
