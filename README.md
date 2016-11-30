@@ -7,12 +7,14 @@ Corporate vue typescript example
 ![screenshot](screen.png)
 
 For more information, please read this [article](https://herringtondarkholme.github.io/2016/10/03/vue2-ts2/)
+
+## how to run template
 ```
 npm install 
 npm run dev
 ```
 
-hot to update vue:
+how to update vue:
 --those two come together you schould have same version
 ```
 npm install vue 
