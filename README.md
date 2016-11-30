@@ -1,4 +1,4 @@
-#  Vue2+ + TypeScript2+ example 
+##  Vue2+ + TypeScript2+ example 
 > All-in Corporate vue typescript template with single file component, hot reload, webpack , express server,
 > local storage, vuex , router
 
@@ -10,7 +10,7 @@ fork based on [av-ts] (https://github.com/HerringtonDarkholme/av-ts), .vue singl
 
 For more information, please read this [article](https://herringtondarkholme.github.io/2016/10/03/vue2-ts2/)
 
-## how to run template
+### how to run template
 ```
 npm install 
 npm run dev
