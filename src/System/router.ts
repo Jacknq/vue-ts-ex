@@ -1,6 +1,6 @@
-import {Component, create, getHelper,Vue,Vuex }  from '../ext'
+import { Component, create, getHelper, Vue, Vuex } from '../ext'
 //import Router = require('vue-router')
-import {  RouterOptions,Location, RouteConfig, Route } from 'vue-router'
+import { RouterOptions, Location, RouteConfig, Route } from 'vue-router'
 import * as VueRouter from 'vue-router'
 
 
@@ -27,18 +27,17 @@ var about = require('../Views/about.vue').default
 //var app = Vue.extend({});
 //var ro :RouteConfig[] = [ { path:'/', component:VueRouter  }]
 
-const router = new VueRouter({ 
-   mode:'history',
-   routes:[
-     
-     { path: '/' },
-      {  path:'/ts', component:separatets},
-   {  path:'/about', component:about},
-  // { path: '/item/:id(\\d+)', component: Donor }, // component: ItemView },
-    { path: '/module/:compname' }, // component: UserView },
-      { path: '*', redirect: '/about'  },
-   // { path: '*', redirect: '/about'  }
-  //     path:'/', component:VueRouter
-  ]  
- });
- export default router
+const router = new VueRouter({
+  mode: 'history',
+  routes: [
+
+    { path: '/' },
+    { path: '/ts/:id(\\d+)', component: separatets },
+    { path: '/about', component: about },
+
+    { path: '/module/:compname' },
+    { path: '*', redirect: '/about' },
+
+  ]
+});
+export default router
