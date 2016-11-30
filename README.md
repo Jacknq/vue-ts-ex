@@ -1,5 +1,6 @@
 Vue2+ + TypeScript2+ example 
-fork based on av-ts, .vue single file component, also separate ts files demonstation 
+--------------------------------
+fork based on [av-ts] (https://github.com/HerringtonDarkholme/av-ts), .vue single file component, also separate ts files demonstation 
 Corporate vue typescript example
 ------
 
