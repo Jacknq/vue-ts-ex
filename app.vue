@@ -21,11 +21,11 @@
   </div>
 </template>
 <script>
-var navbar = require('./src/Components/lib/navbar.vue').default
+var navbar = require('./src/components/navbar.vue').default
 //var about = require('./src/Components/Views/about.vue').default
-var separatets = require('./src/Components/Views/separatets.vue').default
-import  store  from './src/Components/System/store'
-import {Component, create, getHelper,Vue,Vuex }  from './src/Components/etx'
+var separatets = require('./src/Views/separatets.vue').default
+import  store  from './src/System/store'
+import {Component, create, getHelper,Vue,Vuex }  from './src/ext'
 
 var { getters, commit } = getHelper(store)
 //  declare module 'av-ts/dist/src/interface.d' {

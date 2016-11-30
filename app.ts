@@ -2,12 +2,12 @@ declare var require: any
 //var navbar = require('./navbar.vue').default //from './Components/navbar'
 //import * as home from './Components/Views/home'
 //var home =  require('./Components/lib/home.vue').default
-import { Component, create, getHelper, Vue, Vuex } from './src/Components/etx'
+import { Component, create, getHelper, Vue, Vuex } from './src/ext'
 //import Router = require('vue-router')
 import { RouterOptions, Location, RouteConfig, Route } from 'vue-router'
 import * as VueRouter from 'vue-router'
 //import Vue = require('vue')
-import router from './src/Components/System/router'
+import router from './src/System/router'
 var App = require('./app.vue').default
 Vue.use(VueRouter);
 var appl;
