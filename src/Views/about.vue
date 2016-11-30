@@ -1,8 +1,8 @@
 <template>
     <div>
-         This is ABOUT template..{{someabout}}  
-</br>
-<input type="text"  v-model="someabout">
+        This is ABOUT template..{{someabout}}
+        </br>
+        <input type="text" v-model="someabout">
     </div>
 </template>
 <script>

@@ -22,20 +22,14 @@
 </template>
 <script>
 var navbar = require('./src/components/navbar.vue').default
-//var about = require('./src/Components/Views/about.vue').default
 var separatets = require('./src/Views/separatets.vue').default
 import  store  from './src/System/store'
 import {Component, create, getHelper,Vue,Vuex }  from './src/ext'
 
 var { getters, commit } = getHelper(store)
-//  declare module 'av-ts/dist/src/interface.d' {
-//   export  interface ComponentMeta extends Vue.ComponentOptions<Vue> {
-//           //  TESTER:{}
-//          }
-//  }src="./appc.ts" 
 
 @Component({  components:{ navbar}  }) //,separatets, about
-//@Component
+
 export default class App extends Vue {
   name = 'Rem'
   //example of manipulating central store values
