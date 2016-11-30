@@ -1,7 +1,8 @@
 Vue2+ + TypeScript2+ example 
+> Corporate vue typescript template with single file component
 --------------------------------
 fork based on [av-ts] (https://github.com/HerringtonDarkholme/av-ts), .vue single file component, also separate ts files demonstation 
-Corporate vue typescript example
+
 ------
 
 ![screenshot](screen.png)
