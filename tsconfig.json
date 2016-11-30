@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "experimentalDecorators": true,
+        "lib": ["es5", "es2015.promise", "dom"],
+        "moduleResolution": "node"
+    }
+}
