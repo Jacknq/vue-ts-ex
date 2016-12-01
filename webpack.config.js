@@ -1,4 +1,9 @@
 var path =  require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var webpack = require('webpack');
+var merge = require('webpack-merge');
+
+
 module.exports = {
       context: path.resolve(__dirname, './'),
     entry: { app: './app.ts', },
@@ -24,4 +29,21 @@ module.exports = {
       // make TS' generated code cooperate with vue-loader
       esModule: true
     },
-}
+     plugins: [
+  
+    // new webpack.DefinePlugin({
+    //   'process.env': config.dev.env
+    // }),
+    // https://github.com/glenjamin/webpack-hot-middleware#installation--usage
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin(),
+    // https://github.com/ampedandwired/html-webpack-plugin
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: 'index.html',
+      inject: true
+    })
+  
+  ]
+};
