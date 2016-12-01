@@ -1,9 +1,9 @@
 import {Component, create, getHelper,Vue,Vuex }  from '../ext'
 
- @Component({
+
      // name:string = 'separatets'
-     name:'test' 
-})
-export default class separatets extends Vue { // 
+   //  name:'test' 
+@Component({ })
+export default class extends Vue  { // separatets extends Vue
      someabout = 'aboutTS'
 }
