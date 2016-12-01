@@ -17,7 +17,7 @@ if (setupTime == undefined || setupTime == null) {
   localStorage.setItem(C_time, now)
 } else {
   console.log(Date.parse(now) - Date.parse(setupTime))
-  if (Date.parse(now) - Date.parse(setupTime) > 2 * 60 * 1000) {//hours*60*60*1000   //2min  2*60*1000
+  if (Date.parse(now) - Date.parse(setupTime) > hours*60*60*1000 ) {//hours*60*60*1000   //2min  2*60*1000
     localStorage.clear()
     localStorage.setItem('setupTime', JSON.stringify(now));
   }

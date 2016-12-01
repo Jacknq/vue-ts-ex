@@ -93,7 +93,7 @@ module.exports = {
   },
 
   vue: {
-      loaders: { ts: 'vue-ts-loader', js: 'vue-ts-loader' },//js: 'vue-ts-loader',
+      loaders: { ts: 'vue-ts-loader' },//js: 'vue-ts-loader',
     // loaders: [ {
     //     test: /\.js$/,
     //     loader: 'babel',
@@ -108,4 +108,4 @@ module.exports = {
     ],
      esModule: true
   } 
-}
+};
