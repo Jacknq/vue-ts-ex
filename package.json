@@ -75,7 +75,6 @@
     "vue-loader": "^9.5.1",
     "vue-router": "^2.0.3",
     "vue-style-loader": "^1.0.0",
-    "vue-template-compiler": "^2.0.3",
     "vue-ts-loader": "0.0.3",
     "vuex-localstorage": "^0.3.0",
     "webpack": "^1.13.2",

@@ -1,6 +1,6 @@
 ##  Vue2+ + TypeScript2+ example 
 > All-in Corporate vue typescript template with single file component, hot reload, webpack , express server,
-> local storage, vuex , router, pre-compiled templates
+> local storage, vuex , router, pre-compiled templates all out of the box!
 
 fork based on [av-ts] (https://github.com/HerringtonDarkholme/av-ts), .vue single file component, also separate ts files demonstation 
 
@@ -17,8 +17,7 @@ npm run dev
 ```
 
 ### how to update vue:
---those two come together you schould have same version
+
 ```
 npm install vue 
-npm install vue-template-compiler
 ```
