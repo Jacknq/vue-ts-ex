@@ -21,7 +21,7 @@
             <!-- /.container-fluid -->
         </nav>
 </template>
-<script>
+<script lang="ts">
 import {Component, create, getHelper,Vue,Vuex, Prop, Watch }  from '../ext'
  class Link {
     name:string;

@@ -5,7 +5,7 @@
         <input type="text" v-model="someabout">
     </div>
 </template>
-<script>
+<script lang="ts">
 import {Component, create, getHelper,Vue,Vuex }  from '../ext'
 
  @Component({

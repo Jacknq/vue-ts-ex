@@ -20,7 +20,7 @@
   </div>
   </div>
 </template>
-<script>
+<script lang="ts">
 var navbar = require('./src/components/navbar.vue').default
 var separatets = require('./src/Views/separatets.vue').default
 import  store  from './src/System/store'
