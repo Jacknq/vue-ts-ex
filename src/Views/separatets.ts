@@ -6,4 +6,5 @@ import {Component, create, getHelper,Vue,Vuex }  from '../ext'
 @Component({ })
 export default class extends Vue  { // separatets extends Vue
      someabout = 'aboutTS'
+     name = 'tscomponent'
 }
