@@ -1,9 +1,7 @@
 <template>
   <div class="container">
    <navbar></navbar>
-
-    <div class="container">
-
+   
       <div class="row">
         <div class="col-md-2">
            <br/><br/><br/>
@@ -36,7 +34,7 @@
           3 of 3
         </div>
       </div>
-    </div>
+
   </div>
   </div>
 </template>
@@ -64,7 +62,7 @@ import "bootstrap/dist/js/bootstrap.js";
 @Component({  components:{ navbar}  }) //,separatets, about , Bootstrap
 
 export default class App extends Vue {
-  name = 'Rem'
+  name = 'Jenny'
   //example of manipulating central store values
   @Vuex i = getters('count')
   @Vuex add = commit('increment')
