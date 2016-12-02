@@ -5,7 +5,7 @@
  - fork based on [av-ts] (https://github.com/HerringtonDarkholme/av-ts), .vue single file component, also separate ts files demonstation 
 
 ------
-![screenshot](capture.png)
+![screenshoot](capture.PNG)
 
 ![screenshot](screen1.png)
 
