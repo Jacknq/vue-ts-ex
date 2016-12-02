@@ -1,5 +1,5 @@
 import {Component, create, getHelper,Vue,Vuex }  from '../ext'
-
+//let BootstrapVue = require('bootstrap-vue'); 
 
      // name:string = 'separatets'
    //  name:'test' 

@@ -13,13 +13,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "av-ts": "^0.2.0",
-    "kilimanjaro": "^0.2.0",
-    "vue": "^2.0.1"
+    
+    "vue": "^2.1.3"
   },
   "devDependencies": {
     "@types/node": "^6.0.49",
     "autoprefixer": "^6.4.0",
+    "av-ts": "^0.5.5",
     "babel-core": "^6.18.2",
     "babel-eslint": "^7.0.0",
     "babel-loader": "^6.2.7",
@@ -32,6 +32,10 @@
     "babel-preset-stage-2": "^6.11.0",
     "babel-register": "^6.0.0",
     "babel-runtime": "6.11.6",
+    "bootstrap": "^4.0.0-alpha.5",
+    "bootstrap-without-jquery": "^1.0.4",
+    "kilimanjaro": "^0.5.0",
+    "bootstrap-vue": "^0.3.9",
     "chromedriver": "^2.21.2",
     "connect-history-api-fallback": "^1.1.0",
     "cross-spawn": "^4.0.2",
@@ -68,12 +72,14 @@
     "shelljs": "^0.7.4",
     "stylus": "^0.54.5",
     "stylus-loader": "^2.1.2",
+    "tether": "^1.3.8",
     "typescript": "^2.1.1",
     "url-loader": "^0.5.7",
     "vue": "^2.1.3",
     "vue-class-component": "^4.3.1",
     "vue-loader": "^9.5.1",
     "vue-router": "^2.0.3",
+    "vue-strap": "^1.1.33",
     "vue-style-loader": "^1.0.0",
     "vue-ts-loader": "0.0.3",
     "vuex-localstorage": "^0.3.0",

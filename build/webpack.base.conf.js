@@ -9,6 +9,7 @@ module.exports = {
     path: config.build.assetsRoot,
     publicPath: process.env.NODE_ENV === 'production' ? config.build.assetsPublicPath : config.dev.assetsPublicPath,
     filename: '[name].js'
+    //, libraryTarget: 'umd'
   },
   resolve: {
     extensions: ['','.ts', '.js', '.vue'],//['','.ts', '.js', '.vue', '.vuets'],
@@ -17,7 +18,7 @@ module.exports = {
       'src': path.resolve(__dirname, '../src'),
       'assets': path.resolve(__dirname, '../src/assets'),
       'components': path.resolve(__dirname, '../src/components'),
-      // vue: 'app.js'
+      'vue$': 'vue/dist/vue.common.js'
     }
   },
   resolveLoader: {
@@ -93,7 +94,12 @@ module.exports = {
   },
 
   vue: {
-      loaders: { ts: 'vue-ts-loader' },//js: 'vue-ts-loader',
+      loaders: { ts: 'vue-ts-loader',
+      css: 'vue-style-loader!css',
+      stylus: 'vue-style-loader!css!stylus',    
+      less: 'vue-style-loader!css!less'   
+   }, //{ css: 'vue-style-loader!css'}],//js: 'vue-ts-loader',
+ 
     // loaders: [ {
     //     test: /\.js$/,
     //     loader: 'babel',

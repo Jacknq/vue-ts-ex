@@ -1,5 +1,5 @@
 #  Vue2+ + TypeScript2+ example 
- All-in Corporate vue typescript template with single file component, hot reload, webpack , express server,
+ All-in Corporate vue typescript template with single file component, hot reload, bootstrap 4,  webpack , express server,
  local storage, vuex , router, pre-compiled templates all out of the box!
 
  - fork based on [av-ts] (https://github.com/HerringtonDarkholme/av-ts), .vue single file component, also separate ts files demonstation 

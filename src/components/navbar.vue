@@ -1,25 +1,31 @@
 <template>
-    <div>
-
-        <nav class="navbar navbar-default" v-bind:class="{'navbar-inverse' : inverted}">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-
-                <h1> {{inverted}} /</h1>
-                <h1> {{someother}} nJOJOame</h1>
-
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li v-for="link in links">
-                            <router-link :to="link.path">{{link.name}}</router-link>
-                            <!-- ROUTERLINK IS THE TRICK <a :href="link.path"></a></li>-->
+       <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+      <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+        aria-expanded="false" aria-label="Toggle navigation"></button>
+      <div class="collapse navbar-toggleable-md" id="navbarResponsive">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <ul class="nav navbar-nav">
+                <li class="nav-item" v-for="link in links">
+                            <router-link active-class="active" exact  class="nav-link" :to="link.path">{{link.name}}</router-link>
+                   
                         </li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse  v-bind:class="{'active' : $route.path == link.path}"-->
+         
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="responsiveNavbarDropdown" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu" aria-labelledby="responsiveNavbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
             </div>
-            <!-- /.container-fluid -->
-        </nav>
+          </li>
+        </ul>
+        <form class="form-inline float-lg-right">
+          <input class="form-control" type="text" placeholder="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
 </template>
 <script lang="ts">
 import {Component, create, getHelper,Vue,Vuex, Prop, Watch }  from '../ext'
@@ -47,7 +53,7 @@ export default class navbar extends Vue {
       links = [
           new Link('Home', '/'),
           new Link('About', '/about'),
-            new Link('type separate', '/ts')
+            new Link('Typescript', '/ts')
       ]
    
      @Watch<navbar, string>( function(this, newVal?:any, oldVal?:any ){ // this.$route.path:string , newVal?:any, oldVal?:any 
