@@ -1,10 +1,7 @@
 <template>
     <nav class="navbar navbar-dark bg-inverse navbar-fixed-top">
         <input type="checkbox" id="navbar-toggle-cbox" v-model="expanded" >
-        <!--<label for="navbar-toggle-cbox" class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbar-header"
-            aria-controls="navbar-header">
-          &#9776;
-        </label>-->
+    
             <label for="navbar-toggle-cbox" class="navbar-toggler hidden-lg-up" type="button"
              data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header"
             aria-expanded="false" aria-label="Toggle navigation"> <span class="mico"></span></label>
@@ -86,6 +83,12 @@ width: 21px;
 top: -4px; 
 height:0; left: 1px;
 position:relative;
+}
+
+.navbar-dark .navbar-toggler {
+  background-image: none important!;
+  background-color: transparent important!;
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 

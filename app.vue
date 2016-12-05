@@ -4,19 +4,12 @@
 
     <div class="row">
       <div class="col-md-2">
-        <br/> 1a of 3  
- <alert type="success">
-    This is a <strong>success</strong> alert.
-</alert>
-<dropdown text="Action" type="primary">
-  <li><a href="#dropdown">Action</a></li>
-  <li role="separator" class="divider"></li>
-  <li><a href="#dropdown">Separated link</a></li>
-</dropdown>
+        <br/> <br/> <br/> 1a of 3  
+
           
       </div>
       <div class="col-md-8">
-        <br/>
+       <br/> <br/> <br/>
         <div>
           <h3 @click="hello">
             {{name}} is the best girl for {{i}} times
