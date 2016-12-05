@@ -1,34 +1,30 @@
 <template>
-       <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
-      <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
-        aria-expanded="false" aria-label="Toggle navigation"></button>
-      <div class="collapse navbar-toggleable-md" id="navbarResponsive">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <ul class="nav navbar-nav">
-                <li class="nav-item" v-for="link in links">
-                            <router-link active-class="active" exact  class="nav-link" :to="link.path">{{link.name}}</router-link>
+    <nav class="navbar navbar-dark bg-inverse navbar-fixed-top">
+        <input type="checkbox" id="navbar-toggle-cbox" v-model="expanded" >
+        <!--<label for="navbar-toggle-cbox" class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbar-header"
+            aria-controls="navbar-header">
+          &#9776;
+        </label>-->
+            <label for="navbar-toggle-cbox" class="navbar-toggler hidden-lg-up" type="button"
+             data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header"
+            aria-expanded="false" aria-label="Toggle navigation"> <span class="mico"></span></label>
+        </input>
+        <div class="collapse navbar-toggleable-md" id="navbar-header">
+            <a class="navbar-brand" href="#">Brandname</a>
+            <ul class="nav navbar-nav">
+                <li  v-on:click="expanded=false" class="nav-item" v-for="link in links">
+                    <router-link  active-class="active"
+                     exact data-toggle="collapse" data-target=".in"
+                     class="nav-link" :to="link.path">{{link.name}}</router-link>
                    
-                        </li>
-         
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="http://example.com" id="responsiveNavbarDropdown" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">Dropdown</a>
-            <div class="dropdown-menu" aria-labelledby="responsiveNavbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
-        </ul>
-        <form class="form-inline float-lg-right">
-          <input class="form-control" type="text" placeholder="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
+                </li>
+            </ul>
+        </div>
     </nav>
 </template>
 <script lang="ts">
 import {Component, create, getHelper,Vue,Vuex, Prop, Watch }  from '../ext'
+
  class Link {
     name:string;
    public path:string;
@@ -45,7 +41,7 @@ import {Component, create, getHelper,Vue,Vuex, Prop, Watch }  from '../ext'
     })
 export default class navbar extends Vue {
     someprop = 'test'
-      inverted:boolean = true;
+    expanded:boolean = false;
       
       
      someother ='seomesome'
@@ -71,3 +67,26 @@ export default class navbar extends Vue {
     }
 }
 </script>
+<style lang="less">
+/* navbar without js*/
+#navbar-toggle-cbox:checked ~ .collapse {
+    display:block;
+}
+
+#navbar-toggle-cbox {
+   display: none;
+}
+
+@mcolor: #f4f7fc; 
+
+.mico{  -webkit-box-shadow: 1px 10px 1px 1px @mcolor,1px 16px 1px 1px @mcolor,1px 22px 1px 1px @mcolor;
+box-shadow:0 10px 0px 1px @mcolor,0 16px 0 1px @mcolor,0 22px 0 1px @mcolor;
+display: block; 
+width: 21px; 
+top: -4px; 
+height:0; left: 1px;
+position:relative;
+}
+
+
+</style>
