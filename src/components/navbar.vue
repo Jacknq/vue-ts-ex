@@ -1,5 +1,6 @@
 <template>
     <nav class="navbar navbar-dark bg-inverse navbar-fixed-top">
+        <div class="container-fluid">
         <input type="checkbox" id="navbar-toggle-cbox" v-model="expanded" >
     
             <label for="navbar-toggle-cbox" class="navbar-toggler hidden-lg-up" type="button"
@@ -11,12 +12,22 @@
             <ul class="nav navbar-nav">
                 <li  v-on:click="expanded=false" class="nav-item" v-for="link in links">
                     <router-link  active-class="active"
-                     exact data-toggle="collapse" data-target=".in"
+                     exact data-toggle="collapse" data-target="navbar-header"
                      class="nav-link" :to="link.path">{{link.name}}</router-link>
                    
                 </li>
             </ul>
+            <form class="form-inline float-lg-right">
+    <select class="bootstrap-select">
+  <option>Mustard</option>
+  <option>Ketchup</option>
+  <option>Relish</option>
+</select>
+    <input class="form-control" type="text" placeholder="Search">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+</form>
         </div>
+         </div>
     </nav>
 </template>
 <script lang="ts">

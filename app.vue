@@ -32,6 +32,7 @@
       </div>
 
       <div class="col-md-2">
+         <br/> <br/> <br/>
         3 of 3
       </div>
     </div>
