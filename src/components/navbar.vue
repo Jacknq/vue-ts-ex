@@ -79,7 +79,7 @@ export default class navbar extends Vue {
 
 @mcolor: #f4f7fc; 
 
-.mico{  -webkit-box-shadow: 1px 10px 1px 1px @mcolor,1px 16px 1px 1px @mcolor,1px 22px 1px 1px @mcolor;
+.mico{  -webkit-box-shadow: 0px 10px 0px 1px @mcolor,0px 16px 0px 1px @mcolor,0px 22px 0px 1px @mcolor;
 box-shadow:0 10px 0px 1px @mcolor,0 16px 0 1px @mcolor,0 22px 0 1px @mcolor;
 display: block; 
 width: 21px; 
