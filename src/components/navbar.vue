@@ -76,7 +76,8 @@ export default class navbar extends Vue {
 
 @mcolor: #f4f7fc; 
 
-.mico{  -webkit-box-shadow: 0px 10px 0px 1px @mcolor,0px 16px 0px 1px @mcolor,0px 22px 0px 1px @mcolor;
+.mico{  
+-webkit-box-shadow: 0px 10px 0px 1px @mcolor,0px 16px 0px 1px @mcolor,0px 22px 0px 1px @mcolor;
 box-shadow:0 10px 0px 1px @mcolor,0 16px 0 1px @mcolor,0 22px 0 1px @mcolor;
 display: block; 
 width: 21px; 
@@ -86,9 +87,11 @@ position:relative;
 }
 
 .navbar-dark .navbar-toggler {
-  background-image: none important!;
-  background-color: transparent important!;
+  background-image: none !important;
+  background:transparent !important;
+  background-color: none !important;
   border-color: rgba(255, 255, 255, 0.1);
+  -webkit-appearance:inherit  !important;
 }
 
 
