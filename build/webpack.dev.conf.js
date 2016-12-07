@@ -35,7 +35,8 @@ module.exports = merge(baseWebpackConfig, {
             $: "jquery",
             jQuery: "jquery",
             'window.Jquery': "jquery",
-            "window.Tether": 'tether'
+          //  "window.Tether": 'tether',
+           // "window.Sortable": 'sortablejs'
     }),
     // https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({

@@ -16,7 +16,7 @@ window.onload = function () {
     new Vue({
       el: '#app',
       router: router,
-      components: { App },
+      components: { App:App },
       render: h => h('App')
     });
 }

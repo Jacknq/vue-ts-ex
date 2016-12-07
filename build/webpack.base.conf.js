@@ -9,7 +9,7 @@ module.exports = {
     path: config.build.assetsRoot,
     publicPath: process.env.NODE_ENV === 'production' ? config.build.assetsPublicPath : config.dev.assetsPublicPath,
     filename: '[name].js'
-    //, libraryTarget: 'umd'
+    , libraryTarget: 'umd'
   },
   resolve: {
     extensions: ['','.ts', '.js', '.vue'],//['','.ts', '.js', '.vue', '.vuets'],
@@ -59,7 +59,8 @@ module.exports = {
       {
         test: /\.ts$/,
         exclude: /node_modules|vue\/src/,
-        loader: 'vue-ts'
+        //loader: 'vue-ts'
+        loaders: ['babel-loader', 'vue-ts']
       },
     // {
     //   test: /\.ts$/, loaders: [ 'ts-loader'], exclude: /node_modules/
@@ -94,7 +95,8 @@ module.exports = {
   },
 
   vue: {
-      loaders: { ts: 'vue-ts-loader', js: 'babel!eslint',
+      loaders: { ts: 'babel-loader!vue-ts-loader', js: 'babel',
+        //loaders: { ts: 'babel-loader!vue-ts-loader', js: 'babel!eslint',
       css: 'vue-style-loader!css',
       stylus: 'vue-style-loader!css!stylus',    
       less: 'vue-style-loader!css!less'   
@@ -111,7 +113,7 @@ module.exports = {
       require('autoprefixer')({
         browsers: ['last 2 versions']
       })
-    ],
-     esModule: true
+    ]//,
+    , esModule: true
   } 
 };

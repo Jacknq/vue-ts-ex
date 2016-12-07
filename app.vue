@@ -4,19 +4,12 @@
 
     <div class="row">
       <div class="col-md-2">
-        <br/> <br/> <br/> 1a of 3  
-
-          
+        <br/> <br/> <br/> 1a of 3
       </div>
-      <div class="col-md-8">
-       <br/> <br/> <br/>
+      <div class="col-md-10">
+        <br/> <br/> <br/>
         <div>
-          <h3 @click="hello">
-            {{name}} is the best girl for {{i}} times
-            <button class="btn btn-secondary" @click.stop="add(2)">+</button>
-            <button class="btn btn-secondary" @click.stop="sub">-</button>
-          </h3>
-          </transition>
+   
         </div>
         <transition name="fade" mode="out-in">
           <!--<div v-if="this.$route.params.compname==undefined">-->
@@ -31,10 +24,9 @@
         </div>
       </div>
 
-      <div class="col-md-2">
-         <br/> <br/> <br/>
-        3 of 3
-      </div>
+      <!--<div class="col-md-2">
+        <br/> <br/> <br/> 3 of 3
+      </div>-->
     </div>
 
   </div>
@@ -42,18 +34,10 @@
 </template>
 <script lang="ts">
 var navbar = require('./src/components/navbar.vue').default
-var separatets = require('./src/Views/separatets.vue').default
 import  store  from './src/System/store'
-//import { alert } from 'vue-strap'
-//var alert = require('vue-strap').alert;
-//var dropdown = require('vue-strap').dropdown;
-
-//var alert = require('bootstrap-vue').alert;
-//var dropdown = require('bootstrap-vue').dropdown;
-
-//var navbar = require('vue-strap').navbar;
-import {Component, create, getHelper,Vue,Vuex,Lifecycle }  from './src/ext'
-var { getters, commit } = getHelper(store)
+import {Component, create, getHelper,Vue, Vuex,Lifecycle }  from './src/ext'
+//import Vue from "./node_modules/vue/dist/vue.common.js";
+//var { getters, commit } = getHelper(store)
 //import 'tether';
 //import "jquery";
 
@@ -62,27 +46,17 @@ var { getters, commit } = getHelper(store)
 //var bo = require('bootstrap-vue').default;
 //Vue.use(bo);
 
-@Component({  components:{ navbar }  //alert: bo.alert, dropdown:bo.dropdown
+@Component({  components:{ navbar  }  // multiselect:multiselect,vselect:vselect bo.alert, dropdown:bo.dropdown
 
  }) //,separatets, about , Bootstrap
 export default class App extends Vue {
-  name = 'Jenny'
-   showRight= false
+  name = 'App'
+
   //example of manipulating central store values
-  @Vuex i = getters('count')
-  @Vuex add = commit('increment')
-  @Vuex sub = commit('decrement')
-
-  someother ='seomesome'
-
  @Lifecycle mounted() {
        //here you show the alert
-       console.log('created')
-       this.showRight = true;
+       console.log('app mounted')       
     }
-  hello() {
-    alert(this.name + ' is the best girl!') 
-  }
 }
  </script>
 <style lang="stylus">
