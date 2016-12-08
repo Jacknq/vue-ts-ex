@@ -5,4 +5,4 @@
 #
 # To enable this hook, rename this file to "post-commit".
 
-git push --mirror origin
+git push 
