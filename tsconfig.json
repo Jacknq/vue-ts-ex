@@ -3,7 +3,10 @@
     "module": "commonjs",
     "target": "es6",
     "noImplicitAny": false,
-    "sourceMap": true, "experimentalDecorators": true
+    "sourceMap": true, "experimentalDecorators": true, "lib": [
+      // "dom"
+      "es2015.promise", "es2015.iterable", "dom","dom.iterable","es2015"
+    ]
   },
   "exclude": [
     "node_modules"

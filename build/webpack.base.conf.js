@@ -95,7 +95,7 @@ module.exports = {
   },
 
   vue: {
-      loaders: { ts: 'babel-loader!vue-ts-loader', js: 'babel',
+      loaders: { ts: 'vue-ts-loader', js: 'babel',
         //loaders: { ts: 'babel-loader!vue-ts-loader', js: 'babel!eslint',
       css: 'vue-style-loader!css',
       stylus: 'vue-style-loader!css!stylus',    
