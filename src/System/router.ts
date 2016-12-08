@@ -29,7 +29,7 @@ var home = require('../Views/home.vue').default
 //var ro :RouteConfig[] = [ { path:'/', component:VueRouter  }]
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'history',//base:'subdomain',
   routes: [
 
     { path: '/',component: home },
