@@ -6,7 +6,7 @@ import { Component, create, getHelper, Vue, Vuex } from './src/ext'
 //import Router = require('vue-router')
 import { RouterOptions, Location, RouteConfig, Route } from 'vue-router'
 import * as VueRouter from 'vue-router'
-//import Vue = require('vue') abc++k00012001
+//import Vue = require('vue') abc++k00012001oo
 import router from './src/System/router'
 var App = require('./app.vue').default
 Vue.use(VueRouter);
