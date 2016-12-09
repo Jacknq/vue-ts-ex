@@ -33,7 +33,8 @@
   </div>
 </template>
 <script lang="ts">
-var navbar = require('./src/components/navbar.vue').default
+//var navbar = require('./src/components/navbar.vue').default
+import  navbar from './src/components/navbar.vue'
 import  store  from './src/System/store'
 import {Component, create, getHelper,Vue, Vuex,Lifecycle }  from './src/ext'
 //import Vue from "./node_modules/vue/dist/vue.common.js";
