@@ -14,6 +14,7 @@ For more information, please read this [article](https://herringtondarkholme.git
 ### how to run template
 ```
 npm install 
+
 npm run dev
 ```
 
@@ -21,4 +22,21 @@ npm run dev
 
 ```
 npm install vue 
+```
+
+typings support
+
+For TypeScript 2.x, there are now two steps:
+
+    Install a package that defines require. For example:
+```
+    npm install @types/node --save-dev
+```
+    Tell TypeScript to include it globally in tsconfig.json:
+```
+    {
+        "compilerOptions": {
+            "types": ["node"]
+        }
+    }
 ```
