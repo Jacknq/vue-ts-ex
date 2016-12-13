@@ -1,3 +1,82 @@
+import * as moment from 'moment'
+
+export class StorageService {
+  constructor() {
+    //throw new Error("Cannot new this class");
+  }
+  public ENV_KEYs = 'ENV_KEY'
+  C_times = 'setuptime'
+  public validHours: number = 12; // Reset when storage is more than Xhours
+  //now =  //no new date, got problems
+  //setupTime = localStorage.getItem(C_time);//cannot dateparse here diferent browsers problem
+  setupTime(): string {
+    var r = localStorage.getItem(this.C_times);
+    if (r === null || typeof r === "undefined" || r === "undefined") {
+      return null;
+    }
+    return r;
+  }
+
+  now(): string {
+    return moment.utc().format();
+  }
+
+   checkStoreValid(): void {
+    var setup: string = this.setupTime();
+    if (setup == undefined || setup == null) {
+      console.log('setting now ' + this.now())
+      localStorage.setItem(this.C_times, this.now())
+    }
+    else {
+      console.log('setupTime' + Date.parse(setup) + ' ' + this.now());
+      console.log(Date.parse(this.now()) - Date.parse(setup))
+      if (Date.parse(this.now()) - Date.parse(setup) > this.validHours * 60 * 60 * 1000) {//hours*60*60*1000   //2min  2*60*1000
+        localStorage.clear();
+        localStorage.setItem(this.C_times, this.now());
+      }
+    }
+  }
+  // initialiye value in storage, will not override existing value
+  public setItemInit(key: string, data: string | any): void {
+    this.checkStoreValid();
+    var text: string;
+    if (data && typeof data === "string")
+    { text = data; }
+    else {
+      text = JSON.stringify(data);
+    }
+    // var text: string = JSON.stringify(jsonData);
+    if (localStorage.getItem(key) == undefined) {//dont overide value
+      { //console.log('initdata>>'+ data);
+        localStorage.setItem(key, text);
+      }
+    }
+  }
+
+  public setItem(key: string, data: string | any): void {
+    var text: string;
+    if (data && typeof data === "string")
+    { text = data; }
+    else {
+      text = JSON.stringify(data);
+    }
+    //  else {
+    //  text = JSON.stringify(data);
+    //  } 
+    localStorage.setItem(key, text);
+  }
+
+  public getItem(key: string): string {
+    var r = localStorage.getItem(key);
+    if (r === null || typeof r === "undefined" || r === "undefined") {
+      return null;
+    }
+    // if(val)
+    return r;
+    // return null;
+  }
+
+}
 
 module ft {
     "use strict";
