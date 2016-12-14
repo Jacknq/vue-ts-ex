@@ -6,8 +6,8 @@ import { StorageService } from './localstorage'
 const state = { count: 0, isAuth: false, lang: 'de', mandantid: 0 };
 
 const storage = new StorageService();
-storage.setItemInit(storage.ENV_KEYs, state);
-const storeData = JSON.parse(storage.getItem(storage.ENV_KEYs));
+storage.setItemInit(storage.C_ENV_KEY, state);
+const storeData = JSON.parse(storage.getItem(storage.C_ENV_KEY));
 
 var store = create(storeData)//.
   .getter('count', s => { return s.count })
@@ -24,7 +24,7 @@ var store = create(storeData)//.
       // expect(state).to.equal(store.state)
       //  mutations.push(mut)
       console.log('saving mutation');
-      storage.setItem(storage.ENV_KEYs, state)
+      storage.setItem(storage.C_ENV_KEY, state)
     })
   }
   )

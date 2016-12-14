@@ -4,35 +4,35 @@ export class StorageService {
   constructor() {
     //throw new Error("Cannot new this class");
   }
-  public ENV_KEYs = 'ENV_KEY'
-  C_times = 'setuptime'
+  public C_ENV_KEY = 'ENV_KEY'
+  private C_time = 'setuptime'
   public validHours: number = 12; // Reset when storage is more than Xhours
   //now =  //no new date, got problems
   //setupTime = localStorage.getItem(C_time);//cannot dateparse here diferent browsers problem
-  setupTime(): string {
-    var r = localStorage.getItem(this.C_times);
+  private setupTime(): string {
+    var r = localStorage.getItem(this.C_time);
     if (r === null || typeof r === "undefined" || r === "undefined") {
       return null;
     }
     return r;
   }
 
-  now(): string {
+  private now(): string {
     return moment.utc().format();
   }
 
-   checkStoreValid(): void {
+   private checkStoreValid(): void {
     var setup: string = this.setupTime();
     if (setup == undefined || setup == null) {
       console.log('setting now ' + this.now())
-      localStorage.setItem(this.C_times, this.now())
+      localStorage.setItem(this.C_time, this.now())
     }
     else {
       console.log('setupTime' + Date.parse(setup) + ' ' + this.now());
       console.log(Date.parse(this.now()) - Date.parse(setup))
       if (Date.parse(this.now()) - Date.parse(setup) > this.validHours * 60 * 60 * 1000) {//hours*60*60*1000   //2min  2*60*1000
         localStorage.clear();
-        localStorage.setItem(this.C_times, this.now());
+        localStorage.setItem(this.C_time, this.now());
       }
     }
   }
