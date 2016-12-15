@@ -59,7 +59,8 @@ export default class navbar extends Vue {
       links = [
           new Link('Home', '/'),
           new Link('About', '/about'),
-            new Link('Typescript', '/ts')
+            new Link('Typescript', '/ts'),
+               new Link('Test', '/test')
       ]
 
     public updateSelected (newSelected) {

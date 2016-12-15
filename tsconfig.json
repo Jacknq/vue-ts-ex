@@ -6,7 +6,8 @@
     "sourceMap": true, "experimentalDecorators": true, "lib": [
       // "dom"
       "es2015.promise", "es2015.iterable", "dom","dom.iterable","es2015"
-    ]
+    ] 
+    //,"types": [  "jquery", "node"    ]
   },
   "exclude": [
     "node_modules"

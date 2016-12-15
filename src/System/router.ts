@@ -25,6 +25,7 @@ import * as VueRouter from 'vue-router'
 var separatets = require('../Views/separatets.vue').default
 var about = require('../Views/about.vue').default
 var home = require('../Views/home.vue').default
+var test = require('../Views/test.vue').default
 //var app = Vue.extend({});
 //var ro :RouteConfig[] = [ { path:'/', component:VueRouter  }]
 
@@ -36,6 +37,7 @@ const router = new VueRouter({
     { path: '/ts', component: separatets },
    // { path: '/ts/:id(\\d+)', component: separatets },
     { path: '/about', component: about },
+    { path: '/test', component: test },
 
     { path: '/module/:compname' },
     { path: '*', redirect: '/about' },
