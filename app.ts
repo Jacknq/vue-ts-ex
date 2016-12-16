@@ -20,6 +20,6 @@ window.onload = function () {
       render: h => h('App')
     });
 }
-
+//sds
 //rt.push('/about');//will navigate to specific route
 export default { appl, router }//app
