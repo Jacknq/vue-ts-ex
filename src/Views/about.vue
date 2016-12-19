@@ -72,7 +72,7 @@ export default class extends Vue {
     }
  
   
- @Lifecycle created() {    
+ @Lifecycle created() {   
        
         var t = 'DHYrPKgRxwxXqYTLklPa9vnBHtKlGysgeoow7183jQelfkUfaPJfgVLTPPUejoc9XpfTqrxx92XsgGft7ml_1AYUO5RI4nSdR-eLvt5LlmL89jV90KXDxvwTb05N359kwhN3HYFTj6ESSSDMqb2e3tg2xrmiLiP4eIcwHd8N4BS38qd5BU-UEp6oWULcOhgu';
         //put your signalr server here
