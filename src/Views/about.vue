@@ -30,7 +30,6 @@ import  {Component, create, getHelper,Vue,Vuex, Prop, Watch,Lifecycle }  from '.
  var multiselect = require('vue-multiselect').default;
  import * as fn from '../components/domain'
 
-
  @Component({
       name: 'aboutname', components:{ multiselect }
  })
@@ -83,8 +82,9 @@ export default class extends Vue {
           if (this.db.connection !== undefined)
             { 
               this.db.connection.stop();
+               console.log('connection stopped');
             }
-                console.log('connection stopped');
+               
         }   
 }
 </script>

@@ -2,15 +2,18 @@ import { Component, create, getHelper, Vuex } from '../ext'
 import * as Vue from 'vue'
 import * as moment from 'moment'
 import { StorageService } from './localstorage'
+interface storeData {
+    count: number, isAuth: boolean, lang: string, mandantid: number
+}
+const state : storeData = { count: 0, isAuth: false, lang: 'de', mandantid: 0 };
 
-const state = { count: 0, isAuth: false, lang: 'de', mandantid: 0 };
 
 const storage = new StorageService();
-storage.setItemInit(storage.C_ENV_KEY, state);
-const storeData = JSON.parse(storage.getItem(storage.C_ENV_KEY));
+      storage.setItemInit(storage.C_ENV_KEY, state);
+const storeData : storeData = JSON.parse(storage.getItem(storage.C_ENV_KEY));
 
 var store = create(storeData)//.
-  .getter('count', s => { return s.count })
+  .getter('count', s => { return s.count  })
   .mutation('increment', s => (n: number) => { s.count += n; })//
   .mutation('decrement', s => () => {
     if (s.count <= 0) {
