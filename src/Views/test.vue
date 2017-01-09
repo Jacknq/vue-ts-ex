@@ -19,7 +19,7 @@ export default {
   name: 'pepa',
   data () {
     return {
-      mess: 'Test me Dynamic!'//,message:''
+      mess: 'Test me Dynamic!', message:''
     }
   },
   methods:{
@@ -27,7 +27,7 @@ export default {
   },
    mounted() {
    console.log('tst mounted and'+ this.message);
- 
+    //this
    // mess = 'something else'; //will not work
     }, 
     created() {
