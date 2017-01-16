@@ -6,8 +6,9 @@
             <label for="navbar-toggle-cbox" class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbar-header"
                 aria-controls="navbar-header" aria-expanded="false" aria-label="Toggle navigation"> <span class="mico"></span></label>
             </input>
+              
             <div class="collapse navbar-toggleable-md" id="navbar-header">
-                <a class="navbar-brand" href="#">Brandname</a>
+                <a class="navbar-brand" href="#">  <img class="logo" src="./../assets/logo.png"/></a>
                 <ul class="nav navbar-nav">
                     <li v-on:click="expanded=false" class="nav-item" v-for="link in links">
                         <router-link active-class="active" exact data-toggle="collapse" data-target="navbar-header" class="nav-link" :to="link.path">{{link.name}}</router-link>
@@ -80,6 +81,10 @@
     }
 </script>
 <style lang="less">
+.logo {
+  width: 30px;
+  height: 30px
+}
 /* navbar without js*/
 #navbar-toggle-cbox:checked ~ .collapse {
     display:block;

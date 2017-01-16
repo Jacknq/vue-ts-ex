@@ -28,9 +28,25 @@ var home = require('../Views/home.vue').default
 var test = require('../Views/test.vue').default
 //var app = Vue.extend({});
 //var ro :RouteConfig[] = [ { path:'/', component:VueRouter  }]
+export class VRouter extends VueRouter
+{
+  public router:VueRouter;
+   virtPath:string;
+  constructor(options?:RouterOptions)
+  {  
+     super(options);
+     this.virtPath = options.base; //set subdomain
+  }
 
-const router = new VueRouter({
-  mode: 'history',//base:'subdomain',
+   PathResolve(path:string): string
+  { //this.resolve()
+    return path.replace('~/', this.virtPath);
+  }
+}
+
+
+const router = new VRouter({
+  mode: 'history', base:'', //subdomain
   routes: [
 
     { path: '/',component: home },

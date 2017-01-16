@@ -1,5 +1,7 @@
 <template>
   <div class="container-fluid">
+    <!--<link rel="stylesheet" type="text/css" href="./src/assets/AT/style.css"  />-->
+ 
     <navbar></navbar>
 
     <div class="row">
@@ -33,10 +35,17 @@
   </div>
 </template>
 <script lang="ts">
+//CSS It's recommended to combine it with the css-loader: require("style!css!./file.css").
 //var navbar = require('./src/components/navbar.vue').default
+//require('style-loader!css-loader!./Todolist.css').toString(‌​)
+//var cstyle = require("css-loader!./src/assets/AT/style.css").toString(‌​)
+//import './src/assets/AT/style.css'
+//var ExtractTextPlugin = require("extract-text-webpack-plugin");
 import  navbar from './src/components/navbar.vue'
 import  store  from './src/System/store'
 import {Component, create, getHelper,Vue, Vuex,Lifecycle }  from './src/ext'
+//require("style!raw!./src/assets/AT/style.css");
+//require("style!raw!./src/assets/AT/style.css")
 //import Vue from "./node_modules/vue/dist/vue.common.js";
 //var { getters, commit } = getHelper(store)
 //import 'tether';

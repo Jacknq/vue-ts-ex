@@ -2,6 +2,7 @@ var path = require('path')
 var config = require('../config')
 var utils = require('./utils')
 var projectRoot = path.resolve(__dirname, '../')
+var ExtractTextPlugin=require("extract-text-webpack-plugin");
 
 module.exports = {
   entry: { app: './app.ts' },
@@ -62,6 +63,7 @@ module.exports = {
         //loader: 'vue-ts'
         loaders: ['babel-loader', 'vue-ts']
       },
+     // { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader') },
     // {
     //   test: /\.ts$/, loaders: [ 'ts-loader'], exclude: /node_modules/
     // }, 
@@ -76,7 +78,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url',
         query: {
-          limit: 10000,
+          limit: 100000,
           name: utils.assetsPath('img/[name].[hash:7].[ext]')
         }
       },
@@ -97,7 +99,7 @@ module.exports = {
   vue: {
       loaders: { ts: 'babel-loader!vue-ts-loader', js: 'babel',
         //loaders: { ts: 'babel-loader!vue-ts-loader', js: 'babel!eslint',
-      css: 'vue-style-loader!css',
+      css: 'css',
       stylus: 'vue-style-loader!css!stylus',    
       less: 'vue-style-loader!css!less'   
    }, //{ css: 'vue-style-loader!css'}],//js: 'vue-ts-loader',

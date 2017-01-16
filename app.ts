@@ -10,6 +10,7 @@ import * as VueRouter from 'vue-router'
 import router from './src/System/router'
 var App = require('./app.vue').default
 Vue.use(VueRouter);
+
 var appl;
 window.onload = function () {
   appl =
