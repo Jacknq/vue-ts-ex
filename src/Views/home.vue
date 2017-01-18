@@ -3,7 +3,7 @@
         This Home template..{{someabout}}
         </br>
          <h3 @click="hello">
-            {{name}} is the best girl for {{i}} times
+            {{name}} has the best button for {{i}} times
             <button class="btn btn-secondary" @click.stop="add(2)">+</button>
             <button class="btn btn-secondary" @click.stop="sub">-</button>
           </h3>
