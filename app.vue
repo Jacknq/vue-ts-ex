@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid">
-   <link rel="stylesheet" type="text/css" v-bind:href="'/static/'+loc+'/style.css'"  />
+   <link rel="stylesheet" type="text/css" :href="'/static/'+loc+'/style.css'"  />
  
     <navbar></navbar>
 
