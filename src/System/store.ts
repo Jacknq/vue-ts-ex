@@ -14,6 +14,7 @@ const storeData : storeData = JSON.parse(storage.getItem(storage.C_ENV_KEY));
 
 var store = create(storeData)//.
   .getter('count', s => { return s.count  })
+  .getter('location', s => { return s.location  })
   .mutation('increment', s => (n: number) => { s.count += n; })//
   .mutation('decrement', s => () => {
     if (s.count <= 0) {

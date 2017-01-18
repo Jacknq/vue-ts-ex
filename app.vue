@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid">
-   <link rel="stylesheet" type="text/css" href="/static/AT/style.css"  />
+   <link rel="stylesheet" type="text/css" v-bind:href="'/static/'+loc+'/style.css'"  />
  
     <navbar></navbar>
 
@@ -45,6 +45,7 @@ import  navbar from './src/components/navbar.vue'
 import  store  from './src/System/store'
 import {Component, create, getHelper,Vue, Vuex,Lifecycle }  from './src/ext'
 
+ var { getters, commit } = getHelper(store)
 //require("css!./src/assets/AT/style.css");
 //require("style!raw!./src/assets/AT/style.css");
 //require("style!raw!./src/assets/AT/style.css")
@@ -63,9 +64,9 @@ import {Component, create, getHelper,Vue, Vuex,Lifecycle }  from './src/ext'
  }) //,separatets, about , Bootstrap
 export default class App extends Vue {
   name = 'App'
-
+  @Vuex loc = getters('location')
   //example of manipulating central store values
- @Lifecycle mounted() {
+  @Lifecycle mounted() {
        //here you show the alert
        console.log('app mounted')       
     }
