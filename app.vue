@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid">
-    <!--<link rel="stylesheet" type="text/css" href="./src/assets/AT/style.css"  />-->
+   <link rel="stylesheet" type="text/css" href="/static/AT/style.css"  />
  
     <navbar></navbar>
 
@@ -44,6 +44,8 @@
 import  navbar from './src/components/navbar.vue'
 import  store  from './src/System/store'
 import {Component, create, getHelper,Vue, Vuex,Lifecycle }  from './src/ext'
+
+//require("css!./src/assets/AT/style.css");
 //require("style!raw!./src/assets/AT/style.css");
 //require("style!raw!./src/assets/AT/style.css")
 //import Vue from "./node_modules/vue/dist/vue.common.js";

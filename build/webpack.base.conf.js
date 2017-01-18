@@ -3,6 +3,7 @@ var config = require('../config')
 var utils = require('./utils')
 var projectRoot = path.resolve(__dirname, '../')
 var ExtractTextPlugin=require("extract-text-webpack-plugin");
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: { app: './app.ts' },
@@ -63,6 +64,12 @@ module.exports = {
         //loader: 'vue-ts'
         loaders: ['babel-loader', 'vue-ts']
       },
+    //    { test: /\.css$/, loader: "style-loader!css-loader",
+    //   query: {
+    //       limit: 100000,
+    //       name: utils.assetsPath('css/[name].[ext]')
+    //     }  
+    //  },
      // { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader') },
     // {
     //   test: /\.ts$/, loaders: [ 'ts-loader'], exclude: /node_modules/
@@ -99,7 +106,8 @@ module.exports = {
   vue: {
       loaders: { ts: 'babel-loader!vue-ts-loader', js: 'babel',
         //loaders: { ts: 'babel-loader!vue-ts-loader', js: 'babel!eslint',
-      css: 'css',
+      css: 'style-loader!css-loader?modules=true&localIdentName=[name]__[local]___[hash:base64:5]',
+       //css:'css',
       stylus: 'vue-style-loader!css!stylus',    
       less: 'vue-style-loader!css!less'   
    }, //{ css: 'vue-style-loader!css'}],//js: 'vue-ts-loader',
@@ -117,5 +125,11 @@ module.exports = {
       })
     ]//,
     , esModule: true
-  } 
+  },
+    plugins: [
+      // new CopyWebpackPlugin([  //replaced with use of root static folder
+      //  // context: path.join(__dirname, ''),
+      // { from: path.join(__dirname, '../src/assets/AT'), to: path.join(config.build.assetsRoot,'static/AT')}
+      //   ])
+    ] 
 };

@@ -8,7 +8,7 @@
             </input>
               
             <div class="collapse navbar-toggleable-md" id="navbar-header">
-                <a class="navbar-brand" href="#">  <img class="logo" src="./../assets/logo.png"/></a>
+                <a class="navbar-brand" href="#">  <div class="logo">  </div></a>
                 <ul class="nav navbar-nav">
                     <li v-on:click="expanded=false" class="nav-item" v-for="link in links">
                         <router-link active-class="active" exact data-toggle="collapse" data-target="navbar-header" class="nav-link" :to="link.path">{{link.name}}</router-link>
