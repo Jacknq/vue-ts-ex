@@ -15,7 +15,6 @@ import  {Component, create, getHelper,Vue,Vuex, Prop, Watch,Lifecycle }  from '.
  import  store  from '../System/store'
  var { getters, commit } = getHelper(store)
 
-
  @Component({
       name: 'home', components:{  multiselect:multiselect }
  })

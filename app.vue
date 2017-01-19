@@ -65,6 +65,7 @@ import {Component, create, getHelper,Vue, Vuex,Lifecycle }  from './src/ext'
 export default class App extends Vue {
   name = 'App'
   @Vuex loc = getters('location')
+  @Vuex vars = getters('vars')
   //example of manipulating central store values
   @Lifecycle mounted() {
        //here you show the alert
