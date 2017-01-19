@@ -2,7 +2,7 @@ import { Component, create, getHelper, Vuex } from '../ext'
 import * as Vue from 'vue'
 import * as moment from 'moment'
 import { StorageService } from './localstorage'
-interface storeData {
+export interface storeData {
     count: number, isAuth: boolean, lang: string, mandantid: number, location:string, token:string
 }
 const state : storeData = { count: 0, isAuth: false,token:'', lang: 'de', mandantid: 0, location:'AT' };
