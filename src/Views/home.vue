@@ -7,26 +7,47 @@
             <button class="btn btn-secondary" @click.stop="add(2)">+</button>
             <button class="btn btn-secondary" @click.stop="sub">-</button>
           </h3>
+  <div class="input-group date">
+    <input type="text" class="form-control">
+    <span class="input-group-addon"> <i class="fa fa-calendar"></i></span>
+  </div>
+<!--<div class="input-group">
+  <input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
+  <span class="input-group-addon"> <i class="fa fa-calendar"></i></span>
+ 
+</div>-->
+
     </div>
+    
 </template>
 <script lang="ts">
 import  {Component, create, getHelper,Vue,Vuex, Prop, Watch,Lifecycle }  from '../ext'
  var multiselect = require('vue-multiselect').default;
  import  store  from '../System/store'
  var { getters, commit } = getHelper(store)
+ //$.datepicker = require("bootstrap-datepicker");
 
  @Component({
-      name: 'home', components:{  multiselect:multiselect }
+      name: 'home', components:{  multiselect:multiselect,   datetime: require("vue-datetime-picker").default,piker: require("bootstrap-datepicker") }
  })
 export default class extends Vue {
   name = 'home'
-  someabout = 'home'    
+  someabout = 'home' 
+    result1= null   
   @Vuex i = getters('count')
   @Vuex add = commit('increment')
   @Vuex sub = commit('decrement')
 
  @Lifecycle mounted() {
        //here you show the alert
+    //    $('.datepicker').datepicker({
+    //     language: 'de-DE', autoclose:true, format:'dd.mm.yyyy',
+    //     todayHighlight: true
+    // });
+        $('.input-group.date').datepicker({
+        autoclose: true,format:'dd.mm.yyyy',
+        todayHighlight: true
+    });
        console.log('home mounted')      
     }
   hello() {
@@ -34,3 +55,7 @@ export default class extends Vue {
   }
 }
 </script>
+<style lang="stylus">
+  @import "../../node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker3.standalone.min.css"; 
+  @import "../../node_modules/font-awesome/css/font-awesome.min.css" ;
+  </style>

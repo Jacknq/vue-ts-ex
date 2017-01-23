@@ -22,7 +22,7 @@
       @select="updateSelected">
     </multiselect>-->
                     <input class="form-control" type="text" placeholder="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <button class="btn btn-outline-success" type="submit"><i class="fa fa-search"></i> Search</button>
                 </form>
             </div>
         </div>
