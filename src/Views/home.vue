@@ -7,14 +7,15 @@
             <button class="btn btn-secondary" @click.stop="add(2)">+</button>
             <button class="btn btn-secondary" @click.stop="sub">-</button>
           </h3>
-
-    
-      
-      <div class="col-sm-5">
      
-        <calendar v-model='date2' > </calendar>
-          <calendar v-model='date' > </calendar>
+      <div class="col-sm-5">     
+        <calendar v-model='date' > </calendar> 
+        </br>
+             <calendar v-model='date2' > </calendar>
       </div>
+         <div class="col-sm-5">
+         
+        </div>  
       
     
 <!--<div class="input-group">
@@ -35,9 +36,10 @@ import  {Component, create, getHelper,Vue,Vuex, Prop, Watch,Lifecycle,p }  from 
  //$.datepicker = require("bootstrap-datepicker");
 
  @Component({
-      name: 'home', components:{  multiselect:multiselect, 
-  
-      calendar }
+      name: 'home', components:{
+        multiselect:multiselect,   
+      calendar
+     }
  })
 export default class extends Vue {
   name = 'home'
@@ -65,7 +67,3 @@ export default class extends Vue {
   }
 }
 </script>
-<style lang="stylus">
-  @import "../../node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker3.standalone.min.css"; 
-  @import "../../node_modules/font-awesome/css/font-awesome.min.css" ;
-  </style>
