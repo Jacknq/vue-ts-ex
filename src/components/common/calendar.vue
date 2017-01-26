@@ -27,7 +27,8 @@ require("../../../node_modules/bootstrap-datepicker/dist/locales/bootstrap-datep
 
 
  @Component({
-      name: 'home', components:{ piker: require("bootstrap-datepicker") }
+      name: 'home', //components:{ piker: require("bootstrap-datepicker")
+    // }
  })
 export default class extends Vue {
 
@@ -42,27 +43,29 @@ export default class extends Vue {
 
  @Lifecycle mounted() {
        //here you show the alert
-       var format = 'dd.mm.yyyy'
- let self = this;
-   let args = {
-    language: this.v.lang,
-    todayBtn: 'linked',
-    autoclose: true,// format:format, 
-    todayHighlight: false,
-  
-     forceParse:true
-   };
-    this.$nextTick(function() {
-        $(this.$el).datepicker(args).on('changeDate', function(e) {
-          var date = e.format(format);
-          self.updateValue(date);
-      });
-    });            
+      var format = 'dd.mm.yyyy'
+      let self = this;
+        let args = {
+          language: this.v.lang,
+          todayBtn: "linked",
+          autoclose: true,
+          todayHighlight: true
+        };
+          this.$nextTick(function() {
+              $(this.$el).datepicker(args).on('changeDate', function(e:any) {
+                var date = e.format(format);
+                var sval:string = e.currentTarget.__vue__.$refs.input._value;
+                 //console.log(sval);               
+               //so that value doesnt get erased everytime i put one character there, wait to have more
+               if(sval.length>3)
+                self.updateValue(date);
+            });
+          });            
     }
 
-    updateValue (value) {
-        this.$emit('input', value);      
-      //  console.log('setting value')
+    updateValue (value:string) {  
+       this.$emit('input', value);      
+       // console.log('setting value'+value)
     }
  
 }
