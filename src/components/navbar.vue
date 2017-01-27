@@ -4,7 +4,7 @@
             <input type="checkbox" id="navbar-toggle-cbox" v-model="expanded">
 
             <label for="navbar-toggle-cbox" class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbar-header"
-                aria-controls="navbar-header" aria-expanded="false" aria-label="Toggle navigation"> <span class="mico"></span></label>
+                aria-controls="navbar-header" aria-expanded="false" aria-label="Toggle navigation"> <span class="tglbtn"></span></label>
             </input>
               
             <div class="collapse navbar-toggleable-md" id="navbar-header">
@@ -97,7 +97,7 @@
 
 @mcolor: #f4f7fc; 
 
-.mico{  
+.tglbtn{  
 -webkit-box-shadow: 0px 10px 0px 1px @mcolor,0px 16px 0px 1px @mcolor,0px 22px 0px 1px @mcolor;
 box-shadow:0 10px 0px 1px @mcolor,0 16px 0 1px @mcolor,0 22px 0 1px @mcolor;
 display: block; 
