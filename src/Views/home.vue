@@ -58,7 +58,7 @@ export default class extends Vue {
   @Vuex sub = commit('decrement')
 
  @Lifecycle mounted() {
-       //here you show the alert
+       //here you show the alert here
 
        console.log('home mounted')      
     }
