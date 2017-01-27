@@ -2,7 +2,7 @@
 //export  module  avts{
 //import { Vue as V} from './ext'
 export {  Component, Prop, Watch, Lifecycle,CreateElement, p } from 'av-ts'
-export { create, getHelper, Vuex } from 'kilimanjaro'
+export { create, getHelper, Vuex, Store } from 'kilimanjaro'
 
 // }
 import b = require('./ext');

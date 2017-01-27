@@ -29,7 +29,7 @@
     </nav>
 </template>
 <script lang="ts">
-    import { Component, create, getHelper, Vue, Vuex, Prop, Watch } from '../ext'
+    import { Component, create, getHelper, Vue, Store, Prop, Watch } from '../ext'
 
     var multiselect = require('vue-multiselect').default;
     class Link {
@@ -65,11 +65,12 @@
             this.selected = newSelected
         }
 
-        @Watch<navbar, string>(function (this, newVal?: any, oldVal?: any) { // this.$route.path:string , newVal?:any, oldVal?:any 
+        @Watch(["$route","path"])
+        watchpath(this, newVal?: any, oldVal?: any) { // this.$route.path:string , newVal?:any, oldVal?:any 
             if (this.$route.path != undefined)
                 console.log('Changed current path to: ' + this.$route.path);
-        })
-        '$route.path'
+        }
+       // '$route.path'
         // test is `computed`
         //  get test() {
         //    return 'asd';

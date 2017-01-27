@@ -2,7 +2,7 @@
 //export  module  avts{
 import { Vue, Component, Lifecycle } from 'av-ts'
 export { Vue, Component, Prop, Watch, Lifecycle,CreateElement, p } from 'av-ts'
-export { create, getHelper, Vuex } from 'kilimanjaro'
+export { create, getHelper, Store} from 'kilimanjaro'
 //import { ComponentOptions } from 'vue/types/options';
 import { ComponentMeta } from'av-ts/dist/src/interface.d'
  declare module 'av-ts/dist/src/interface.d' {

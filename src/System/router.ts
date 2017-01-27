@@ -1,4 +1,4 @@
-import { Component, create, getHelper, Vue, Vuex } from '../ext'
+import { Component, create, getHelper, Vue, Store } from '../ext'
 //import Router = require('vue-router')
 import { RouterOptions, Location, RouteConfig, Route } from 'vue-router'
 import * as VueRouter from 'vue-router'

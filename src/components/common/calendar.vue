@@ -12,7 +12,7 @@
 
 </template>
 <script lang="ts">
-import  {Component, create, getHelper,Vue,Vuex, Prop, Watch,Lifecycle,p }  from '../../ext1'
+import  {Component, create, getHelper,Vue,Store, Prop, Watch,Lifecycle,p }  from '../../ext1'
 import  store  from '../../System/store'
  var { getters, commit } = getHelper(store)
 require("bootstrap-datepicker");
@@ -33,7 +33,7 @@ require("../../../node_modules/bootstrap-datepicker/dist/locales/bootstrap-datep
 export default class extends Vue {
 
   name = 'calendar'
-  @Vuex v  = getters('vars')
+  @Store v  = getters('vars')
   //result1 = null 
   @Prop value = p({
    type: String,

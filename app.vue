@@ -43,7 +43,7 @@
 //var ExtractTextPlugin = require("extract-text-webpack-plugin");
 import  navbar from './src/components/navbar.vue'
 import  store  from './src/System/store'
-import {Component, create, getHelper,Vue, Vuex,Lifecycle }  from './src/ext'
+import {Component, create, getHelper,Vue, Store,Lifecycle }  from './src/ext'
 
  var { getters, commit } = getHelper(store)
 //require("css!./src/assets/AT/style.css");
@@ -64,8 +64,8 @@ import {Component, create, getHelper,Vue, Vuex,Lifecycle }  from './src/ext'
  }) //,separatets, about , Bootstrap
 export default class App extends Vue {
   name = 'App'
-  @Vuex loc = getters('location')
-  @Vuex vars = getters('vars')
+  @Store loc = getters('location')
+  @Store vars = getters('vars')
   //example of manipulating central store values
   @Lifecycle mounted() {
        //here you show the alert

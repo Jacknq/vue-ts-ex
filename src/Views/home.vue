@@ -28,7 +28,7 @@
     
 </template>
 <script lang="ts">
-import  {Component, create, getHelper,Vue,Vuex, Prop, Watch,Lifecycle,p }  from '../ext'
+import  {Component, create, getHelper,Vue,Store, Prop, Watch,Lifecycle,p }  from '../ext'
  var multiselect = require('vue-multiselect').default;
  import  store  from '../System/store'
  var { getters, commit } = getHelper(store)
@@ -42,6 +42,7 @@ import  {Component, create, getHelper,Vue,Vuex, Prop, Watch,Lifecycle,p }  from 
      }
  })
 export default class extends Vue {
+  id='home'
   name = 'home'
   someabout = 'home' 
   date= ''  
@@ -53,9 +54,9 @@ export default class extends Vue {
      //,twoWay: true
   })
  
-  @Vuex i = getters('count')
-  @Vuex add = commit('increment')
-  @Vuex sub = commit('decrement')
+  @Store i = getters('count')
+  @Store add = commit('increment')
+  @Store sub = commit('decrement')
 
  @Lifecycle mounted() {
        //here you show the alert here

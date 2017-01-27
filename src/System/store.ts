@@ -1,4 +1,4 @@
-import { Component, create, getHelper, Vuex } from '../ext'
+import { Component, create, getHelper, Store } from '../ext'
 import * as Vue from 'vue'
 import * as moment from 'moment'
 import { StorageService } from './localstorage'

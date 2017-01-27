@@ -26,7 +26,7 @@
 
 </template>
 <script lang="ts" >
-import  {Component, create, getHelper,Vue,Vuex, Prop, Watch,Lifecycle }  from '../ext'
+import  {Component, create, getHelper,Vue,Store, Prop, Watch,Lifecycle }  from '../ext'
  var multiselect = require('vue-multiselect').default;
  import * as fn from '../components/domain'
 
