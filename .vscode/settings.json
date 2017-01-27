@@ -1,5 +1,11 @@
 {
     "typescript.tsdk": "./node_modules/typescript/lib",
     "git.enabled": false,
-    "debug.allowBreakpointsEverywhere": true
+    "debug.allowBreakpointsEverywhere": true,
+      "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true, "**/dist**":true
+    }
 }
