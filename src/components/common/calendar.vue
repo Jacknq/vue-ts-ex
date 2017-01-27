@@ -12,7 +12,7 @@
 
 </template>
 <script lang="ts">
-import  {Component, create, getHelper,Vue,Vuex, Prop, Watch,Lifecycle,p }  from '../../ext'
+import  {Component, create, getHelper,Vue,Vuex, Prop, Watch,Lifecycle,p }  from '../../ext1'
 import  store  from '../../System/store'
  var { getters, commit } = getHelper(store)
 require("bootstrap-datepicker");
@@ -27,7 +27,7 @@ require("../../../node_modules/bootstrap-datepicker/dist/locales/bootstrap-datep
 
 
  @Component({
-      name: 'home', //components:{ piker: require("bootstrap-datepicker")
+      name: 'calendar'//, //components:{ piker: require("bootstrap-datepicker")
     // }
  })
 export default class extends Vue {
@@ -50,21 +50,29 @@ export default class extends Vue {
           todayBtn: "linked",
           autoclose: true,
           todayHighlight: true
-        };
-          this.$nextTick(function() {
-              $(this.$el).datepicker(args).on('changeDate', function(e:any) {
+        }; 
+       
+          this.$nextTick(()=> {
+              $(this.$el).datepicker(args).on('changeDate',
+                   (e:any)=>{
                 var date = e.format(format);
                 var sval:string = e.currentTarget.__vue__.$refs.input._value;
                  //console.log(sval);               
                //so that value doesnt get erased everytime i put one character there, wait to have more
-               if(sval.length>3)
-                self.updateValue(date);
+               if(sval.length>2){ 
+                 self.updateValue(date); this.log('update '+date+sval);
+                 }
+            }).on('hide', function(e:any) {//catching click here
+                var date = e.format(format);
+                var sval:string = e.currentTarget.__vue__.$refs.input._value;            
+                 self.updateValue(date); self.log('update2 '+date+sval);              
             });
           });            
     }
 
     updateValue (value:string) {  
-       this.$emit('input', value);      
+       this.$emit('input', value);
+     //  this.log('kick me if this works')      
        // console.log('setting value'+value)
     }
  

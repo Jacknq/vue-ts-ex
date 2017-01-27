@@ -1,3 +1,5 @@
 {
-    "typescript.tsdk": "./node_modules/typescript/lib", "git.enabled": false
+    "typescript.tsdk": "./node_modules/typescript/lib",
+    "git.enabled": false,
+    "debug.allowBreakpointsEverywhere": true
 }
