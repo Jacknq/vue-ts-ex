@@ -6,7 +6,7 @@ var ExtractTextPlugin=require("extract-text-webpack-plugin");
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: { app: './app.ts' },
+  entry: { app: './src/app.ts' },
   output: {
     path: config.build.assetsRoot,
     publicPath: process.env.NODE_ENV === 'production' ? config.build.assetsPublicPath : config.dev.assetsPublicPath,
