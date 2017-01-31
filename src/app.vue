@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid">
-   <link rel="stylesheet" type="text/css" :href="'/static/'+loc+'/style.css'"  />
+   <link rel="stylesheet" type="text/css" :href="'/static/skins/'+loc+'/style.css'"  />
  
     <navbar></navbar>
 
@@ -43,7 +43,7 @@
 //var ExtractTextPlugin = require("extract-text-webpack-plugin");
 import  navbar from './components/navbar.vue'
 import  store  from './System/store'
-import {Component, create, getHelper,Vue, Vuex,Lifecycle }  from './ext'
+import {Component, create, getHelper,Vue, Store,Lifecycle }  from './ext'
 
  var { getters, commit } = getHelper(store)
 //require("css!./src/assets/AT/style.css");
@@ -64,8 +64,8 @@ import {Component, create, getHelper,Vue, Vuex,Lifecycle }  from './ext'
  }) //,separatets, about , Bootstrap
 export default class App extends Vue {
   name = 'App'
-  @Vuex loc = getters('location')
-  @Vuex vars = getters('vars')
+  @Store loc = getters('location')
+  @Store vars = getters('vars')
   //example of manipulating central store values
   @Lifecycle mounted() {
        //here you show the alert
@@ -75,7 +75,7 @@ export default class App extends Vue {
  </script>
 <style lang="stylus">
   @import "./../node_modules/bootstrap/dist/css/bootstrap.min.css" 
-  /* @import "./../node_modules/bootstrap-select/dist/css/bootstrap-select.css";*/
+  /* @import "./node_modules/bootstrap-select/dist/css/bootstrap-select.css";*/
   /*@import "//maxcdn.bootstrapcdn.com/bootswatch/3.3.6/sandstone/bootstrap.min.css"*/
 
     hover-drpdwn-col = #7ca8ef
