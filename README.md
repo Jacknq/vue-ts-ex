@@ -9,7 +9,8 @@
  https://github.com/vuejs-templates/webpack
 
  Using official typescript component
- vue-class-component
+ `vue-class-component`
+
 
 ## Visual Studio integration
 It is highly recommended that the following extensions are installed
