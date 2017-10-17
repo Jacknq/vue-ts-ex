@@ -4,6 +4,12 @@
  All-in Corporate vue typescript template with single file component, hot reload, bootstrap 4,  webpack , express server, 
  boostrap, multiselect with search,
  local storage, router, pre-compiled templates all out of the box! Lets Rock!
+ 
+ Based on official templates in js ported to ts: 
+ https://github.com/vuejs-templates/webpack
+
+ Using official typescript component
+ vue-class-component
 
 ## Visual Studio integration
 It is highly recommended that the following extensions are installed
