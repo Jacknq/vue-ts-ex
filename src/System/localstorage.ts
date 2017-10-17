@@ -28,8 +28,8 @@ export class StorageService {
       localStorage.setItem(this.C_time, this.now())
     }
     else {
-      console.log('setupTime' + Date.parse(setup) + ' ' + this.now());
-      console.log(Date.parse(this.now()) - Date.parse(setup))
+     // console.log('got locstorage with setupTime' + Date.parse(setup) );
+    //  console.log(Date.parse(this.now()) - Date.parse(setup))
       if (Date.parse(this.now()) - Date.parse(setup) > this.validHours * 60 * 60 * 1000) {//hours*60*60*1000   //2min  2*60*1000
         localStorage.clear();
         localStorage.setItem(this.C_time, this.now());
@@ -106,7 +106,7 @@ module ft {
 
         readObject<T>(path): T {
             var text: any = this.read(path);
-            var data: T;
+            var data: T|null;
             try {
                 data = <T>JSON.parse(text);
             } catch (error) {

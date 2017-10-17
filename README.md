@@ -1,44 +1,28 @@
-#  Vue2+ + TypeScript2+ example 
- All-in Corporate vue typescript template with single file component, hot reload, bootstrap 4,  webpack , express server, 
- boostrap vue 2 datetimepicker, multiselect with search,
- local storage, vuex , router, pre-compiled templates all out of the box! Lets Rock!
+# xbVue
 
- - based on [av-ts] (https://github.com/HerringtonDarkholme/av-ts), .vue single file component, also separate ts files demonstation 
- alternatively can be vue-class-component 
+> A Vue.js project
 
-------
-![screenshoot](capture.PNG)
+## Visual Studio integration
+It is highly recommended that the following extensions are installed
 
-![screenshot](screen1.png)
+- [NPM Task Runner](https://visualstudiogallery.msdn.microsoft.com/8f2f2cbc-4da5-43ba-9de2-c9d08ade4941)
+- [Vue.js Pack](https://visualstudiogallery.msdn.microsoft.com/30fd019a-7b90-4f75-bb54-b8f49f18fbe1)
 
-For more information, please read this [article](https://herringtondarkholme.github.io/2016/10/03/vue2-ts2/)
+## Build Setup
 
-### how to run template
-```
-npm install 
+``` cmd
+# install dependencies
+npm install
 
+# serve with hot reload at localhost:8080
 npm run dev
+
+# build for production with minification
+npm run build
+
+# run fuse 
+npm run fuse
+
 ```
 
-### how to update vue:
-
-```
-npm install vue 
-```
-
-typings support
-
-For TypeScript 2.x, there are now two steps:
-
-    Install a package that defines require. For example:
-```
-    npm install @types/node --save-dev
-```
-    Tell TypeScript to include it globally in tsconfig.json:
-```
-    {
-        "compilerOptions": {
-            "types": ["node"]
-        }
-    }
-```
+For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

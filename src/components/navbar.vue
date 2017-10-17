@@ -10,7 +10,7 @@
             <div class="collapse navbar-toggleable-md" id="navbar-header">
                 <a class="navbar-brand" href="#">  <div class="logo">  </div></a>
                 <ul class="nav navbar-nav">
-                    <li v-on:click="expanded=false" class="nav-item" v-for="link in links">
+                    <li v-on:click="expanded=false" class="nav-item" v-for="link in links" :key="link">
                         <router-link active-class="active" exact data-toggle="collapse" data-target="navbar-header" class="nav-link" :to="link.path">{{link.name}}</router-link>
 
                     </li>
@@ -29,7 +29,7 @@
     </nav>
 </template>
 <script lang="ts">
-    import { Component, create, getHelper, Vue, Store, Prop, Watch } from '../ext'
+    import { Component, Vue, Prop, Watch } from '../ext'
 
     var multiselect = require('vue-multiselect').default;
     class Link {
@@ -65,7 +65,7 @@
             this.selected = newSelected
         }
 
-        @Watch(["$route","path"])
+        @Watch("$route")
         watchpath(this, newVal?: any, oldVal?: any) { // this.$route.path:string , newVal?:any, oldVal?:any 
             if (this.$route.path != undefined)
                 console.log('Changed current path to: ' + this.$route.path);

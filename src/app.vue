@@ -1,88 +1,54 @@
 <template>
-  <div class="container-fluid">
-   <link rel="stylesheet" type="text/css" :href="'/static/skins/'+loc+'/style.css'"  />
- 
-    <navbar></navbar>
+  <div>
 
-    <div class="row">
-      <div class="col-md-2">
-        <br/> <br/> <br/> 1a of 3
-      </div>
-      <div class="col-md-10">
-        <br/> <br/> <br/>
-        <div>
-   
-        </div>
-        <transition name="fade" mode="out-in">
-          <!--<div v-if="this.$route.params.compname==undefined">-->
-          <router-view class="view"></router-view>
-          <!--</div>-->
-        </transition>
-        <!--DYNAMIC MODULE-->
-        <div class="view" v-if="$route.params.compname!=undefined">
-          <transition name="fade" mode="out-in">
-            <component :is="$route.params.compname"></component>
-          </transition>
-        </div>
-      </div>
-
-      <!--<div class="col-md-2">
-        <br/> <br/> <br/> 3 of 3
-      </div>-->
+    <!-- end main-->
+    <div  ref="second">
+      <master :someprop='123'/>
     </div>
+  </div>
 
-  </div>
-  </div>
 </template>
 <script lang="ts">
 //CSS It's recommended to combine it with the css-loader: require("style!css!./file.css").
-//var navbar = require('./src/components/navbar.vue').default
-//require('style-loader!css-loader!./Todolist.css').toString(‌​)
-//var cstyle = require("css-loader!./src/assets/AT/style.css").toString(‌​)
-//import './src/assets/AT/style.css'
-//var ExtractTextPlugin = require("extract-text-webpack-plugin");
-import  navbar from './components/navbar.vue'
-import  store  from './System/store'
-import {Component, create, getHelper,Vue, Store,Lifecycle }  from './ext'
+//import 'bootstrap'
 
- var { getters, commit } = getHelper(store)
-//require("css!./src/assets/AT/style.css");
-//require("style!raw!./src/assets/AT/style.css");
-//require("style!raw!./src/assets/AT/style.css")
-//import Vue from "./node_modules/vue/dist/vue.common.js";
-//var { getters, commit } = getHelper(store)
-//import 'tether';
-//import "jquery";
+import  master from './Views/master.vue';
 
-//import "bootstrap/dist/js/bootstrap.js";
-//import "bootstrap-select/dist/js/bootstrap-select.js";
-//var bo = require('bootstrap-vue').default;
-//Vue.use(bo);
+import './../node_modules/markdown-it-editor/lib/css/iconfont.b300b13.woff'
 
-@Component({  components:{ navbar  }  // multiselect:multiselect,vselect:vselect bo.alert, dropdown:bo.dropdown
 
+import { Component, Inject, Model, Prop, Vue,Watch  } from 'vue-property-decorator'
+
+@Component({  components:{ master }  
+ 
  }) //,separatets, about , Bootstrap
 export default class App extends Vue {
   name = 'App'
-  @Store loc = getters('location')
-  @Store vars = getters('vars')
-  //example of manipulating central store values
-  @Lifecycle mounted() {
-       //here you show the alert
-       console.log('app mounted')       
-    }
+  viewactive ='main'  //second
+
+     mounted() {
+        //here you show the alert
+      } 
+
 }
  </script>
-<style lang="stylus">
-  @import "./../node_modules/bootstrap/dist/css/bootstrap.min.css" 
-  /* @import "./node_modules/bootstrap-select/dist/css/bootstrap-select.css";*/
-  /*@import "//maxcdn.bootstrapcdn.com/bootswatch/3.3.6/sandstone/bootstrap.min.css"*/
+<style lang="less" >
+ 
+  @import url("./../node_modules/bootstrap/dist/css/bootstrap.min.css");
+   @import  url("./../node_modules/font-awesome/css/font-awesome.min.css") ;
+   @import  url("./../node_modules/vue-multiselect/dist/vue-multiselect.min.css") ;
+  /* @import  url("./../node_modules/highlightjs/styles/github.css");*/
 
-    hover-drpdwn-col = #7ca8ef
-
-    .dropdown-item
-        &:hover
-          background-color:hover-drpdwn-col
+  
+   @import  url("./../node_modules/markdown-it-editor/lib/index.css");
+   @import  url("./../node_modules/markdown-it-editor/lib/preview.css");
+   
+/*@import url("./../node_modules/bootstrap-vue/dist/bootstrap-vue.css");*/
+pre code { 
+    color:white !important;  overflow: auto;      
+}
+/* Improve readability of pre-formatted text in all browsers */
+/* pre { white-space: pre;  overflow: auto;   word-wrap: nowrap; }  */
 
 
 </style>

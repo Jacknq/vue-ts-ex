@@ -1,26 +1,34 @@
 declare var require: any
-//var navbar = require('./navbar.vue').default //from './Components/navbar'
-//import * as home from './Components/Views/home'
-//var home =  require('./Components/lib/home.vue').default
-import { Component, create, getHelper, Vue, Store } from './ext'
-//import Router = require('vue-router')
+
+import { Component, Vue} from './ext1'
 import { RouterOptions, Location, RouteConfig, Route } from 'vue-router'
-import * as VueRouter from 'vue-router'
+import VueRouter from 'vue-router'
+declare var require: any
 //import Vue = require('vue') abc++k00012001oo
 import router from './System/router'
-var App = require('./app.vue').default
-Vue.use(VueRouter);
+import App from './app.vue'
 
-var appl;
-window.onload = function () {
-  appl =
+
+Vue.use(VueRouter);
+Vue.config.devtools = true; //enable debug for build
+
+//var appl:Vue;
+//window.onload = function () {
+  
+  //Vue.config.debug = true;
+  let  appl =
     new Vue({
       el: '#app',
       router: router,
       components: { App:App },
-      render: h => h('App')
+      render: h => h('App'), 
+      //validations:{},
+      methods:{ 
+      //  validations(){}
+       }
     });
-}
+    
+//}
 //sdsasd aaasd
 //rt.push('/about');//will navigate to specific route
 export default { appl, router }//app

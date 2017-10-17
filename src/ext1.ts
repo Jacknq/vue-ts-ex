@@ -1,20 +1,62 @@
 
-//export  module  avts{
-//import { Vue as V} from './ext'
-export {  Component, Prop, Watch, Lifecycle,CreateElement, p } from 'av-ts'
-export { create, getHelper, Vuex, Store } from 'kilimanjaro'
+import { Component, Inject, Model, Prop, Watch  } from 'vue-property-decorator'
+export { Component, Inject, Model, Prop, Watch  } from 'vue-property-decorator'
+//import Vue from 'vue'
+import   store   from './System/store'
+declare var require: any
+import  VueRouter from 'vue-router';
+import axio, { AxiosRequestConfig, AxiosPromise } from 'axios';
+var moment = require("moment");
+//export { d }
+//SgnRCloud
+ //var { getters, commit } = getHelper(store)
 
 // }
-import b = require('./ext');
+//import b = require('./ext');
+import * as b from './ext';
+b.Vue.use(VueRouter);
 //extension methods for default class
-export class Vue extends b.Vue {
-    public log(val:String){
-     console.log(val);
-   }
-   public logErr(val:String){
-     console.log(val);
-   }
+// @Trait class VegetableSearchable extends b.Vue {
+//   vegetableName = 'tomato'
+//   searchVegetable() { alert('find vegi!')}
+// }
+//extend inferace for validations
+declare module 'vue/types/options' {
+  interface ComponentOptions<V extends b.Vue> {
+    validations?: {} //; validations () {};
+  }
 }
+
+//declare module 'vue/types/vue' {
+  // 3. Declare augmentation for Vue
+//interface Vue {
+//$myProperty: string
+  //}
+//}
+//declare module "Vue" {
+  export class Vue extends b.Vue {
+    $v:any;
+    //	@Store vars = getters('vars')
+  //@Store setvars = commit('varsset')  
+      public log(val:String){
+      console.log(val);
+    }
+    public logErr(val:String){
+      console.log(val);
+    }
+    
+  }
+//}
+ 
+//var v = new Vue();
+//EXAMPLE OF DATETIME formatting - FILTER
+// b.Vue.filter('dtformat', function (val) {
+  	
+//   if(val!=null && val!='')
+//     return  moment(val).format(v.vars.dateformat);
+// return '';
+// })
+
 // declare module "Vue" {
 // export class Vue extends V {
 

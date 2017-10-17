@@ -1,4 +1,4 @@
-import { Component, create, getHelper, Vue, Store } from '../ext'
+import { Component, Inject, Model, Prop, Vue,Watch  } from 'vue-property-decorator'
 //let BootstrapVue = require('bootstrap-vue'); 
 import  multiselect from 'vue-multiselect';
 //var multiselect = require('vue-multiselect').default;
@@ -8,9 +8,9 @@ import  multiselect from 'vue-multiselect';
 export default class extends Vue { // separatets extends Vue
   someabout = 'aboutTS'
   name = 'tscomponent'
-
+  selected = [];
    somemethod(): number {
-      
+    
     return 1;
   }
 

@@ -1,9 +1,6 @@
-import { Component, create, getHelper, Vue, Store } from '../ext'
-//import Router = require('vue-router')
+import { Component, Vue } from '../ext'
 import { RouterOptions, Location, RouteConfig, Route } from 'vue-router'
-import * as VueRouter from 'vue-router'
-
-
+import  VueRouter from 'vue-router'
 //import './vendor' //bootstrap
 //require('./main.scss'); //global css
 
@@ -16,47 +13,36 @@ import * as VueRouter from 'vue-router'
   to do that if you are defining a components{} object in the @Component
   options parameter. 
 */
-//import './components/navbar/navbar'
-
-//import { HomeComponent } from './views/home/home'
-//import { AboutComponent } from './views/about/about'
-
-//Vue.use(VueRouter);
-var separatets = require('../Views/separatets.vue').default
-var about = require('../Views/about.vue').default
-var home = require('../Views/home.vue').default
-var test = require('../Views/test.vue').default
-//var app = Vue.extend({});
-//var ro :RouteConfig[] = [ { path:'/', component:VueRouter  }]
-export class VRouter extends VueRouter
-{
-  public router:VueRouter;
-   virtPath:string;
-  constructor(options?:RouterOptions)
-  {  
-     super(options);
-     this.virtPath = options.base; //set subdomain
-  }
-
-   PathResolve(path:string): string
-  { //this.resolve()
-    return path.replace('~/', this.virtPath);
-  }
-}
+declare var require: any
+//var separatets = require( '../Views/separatets.vue').default
+import separatets from  '../Views/separatets.vue'
+import about from '../Views/about.vue'
+import home from '../Views/test.vue'
+var test = home 
 
 
-const router = new VRouter({
+const router = new VueRouter({
   mode: 'history', base:'', //subdomain
   routes: [
 
-    { path: '/',component: home },
+    { path: '/',component: home },  
+    //test guys
     { path: '/ts', component: separatets },
-   // { path: '/ts/:id(\\d+)', component: separatets },
     { path: '/about', component: about },
+    { path: '/test/:tstparam', component: test },
     { path: '/test', component: test },
+ 
+    //test guys
 
-    { path: '/module/:compname' },
-    { path: '*', redirect: '/about' },
+    {
+      path: '/auth/callback',
+      component: {
+        template: '<div class="auth-component"></div>'
+      }
+    },
+
+   // { path: '/module/:compname' },
+    { path: '*', redirect: '/' },
 
   ]
 });
