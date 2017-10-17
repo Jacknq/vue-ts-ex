@@ -1,13 +1,16 @@
 # xbVue
 
-> A Vue.js project
+#  Vue2+ + TypeScript2+ example 
+ All-in Corporate vue typescript template with single file component, hot reload, bootstrap 4,  webpack , express server, 
+ boostrap vue 2 datetimepicker, multiselect with search,
+ local storage, router, pre-compiled templates all out of the box! Lets Rock!
 
 ## Visual Studio integration
 It is highly recommended that the following extensions are installed
 
 - [NPM Task Runner](https://visualstudiogallery.msdn.microsoft.com/8f2f2cbc-4da5-43ba-9de2-c9d08ade4941)
 - [Vue.js Pack](https://visualstudiogallery.msdn.microsoft.com/30fd019a-7b90-4f75-bb54-b8f49f18fbe1)
-
+![screenshoot](capture.PNG)
 ## Build Setup
 
 ``` cmd
@@ -20,8 +23,7 @@ npm run dev
 # build for production with minification
 npm run build
 
-# run fuse 
-npm run fuse
+
 
 ```
 
