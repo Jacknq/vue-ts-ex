@@ -2,7 +2,7 @@
 
 #  Vue2+ + TypeScript2+ example 
  All-in Corporate vue typescript template with single file component, hot reload, bootstrap 4,  webpack , express server, 
- boostrap vue 2 datetimepicker, multiselect with search,
+ boostrap, multiselect with search,
  local storage, router, pre-compiled templates all out of the box! Lets Rock!
 
 ## Visual Studio integration

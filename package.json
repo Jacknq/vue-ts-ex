@@ -43,7 +43,7 @@
     "babel-register": "^6.0.0",
     "babel-runtime": "6.22.0",
     "body-parser": "^1.17.1",
-    "bootstrap": "4.0.0-alpha.5",
+    "bootstrap": "4.0.0-alpha.6",
     "bootstrap-datepicker": "^1.6.4",
     "bootstrap-vue": "^0.11.0",
     "bootstrap-without-jquery": "^1.0.4",
