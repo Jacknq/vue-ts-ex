@@ -38,9 +38,7 @@ Sparky.task("config", () => {
             VueComponentPlugin({
                 style: [
                     LESSPlugin({
-                         group: 'components.css',
-                    inject: 'components.css'
-
+                      
                        // paths: [path.resolve(__dirname, 'node_modules')]
                     }),
                    // TypeScriptHelpers(),
