@@ -36,7 +36,9 @@ declare module 'vue/types/options' {
 //declare module "Vue" {
   export class Vue extends b.Vue {
     $v:any;
-    //	@Store vars = getters('vars')
+    get vars () {
+      return store.state.vars
+    }
   //@Store setvars = commit('varsset')  
       public log(val:String){
       console.log(val);
