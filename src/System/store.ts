@@ -28,18 +28,9 @@ const storage = new StorageService();
 //state.db = new cl.SgnRCloud(state.servurl, state.token);
       storage.setItemInit(storage.C_ENV_KEY, dstate);
 
-
 const storeData : storeData = JSON.parse(storage.getItem(storage.C_ENV_KEY));
-
-//most simplyfied no vuex
-  // var storee = {
-  //                db: new cl.SgnRCloud(dstate.servurl, storeData.token),
-  //                vars:storeData, 
-  //                setvars:(s:storeData)=>{storee.vars = s; storage.setItem(storage.C_ENV_KEY, s)},
-  //                setdb:(s:cl.SgnRCloud)=>{storee.db = s;}
-  //              }
-               import Vuex from 'vuex'
-               Vue.use(Vuex);
+  import Vuex from 'vuex'
+   Vue.use(Vuex);
 //playing around with vuex
 export interface State {
  
