@@ -58,7 +58,7 @@
 import  navbar from '../components/navbar.vue'
 import  store  from '../System/store'
 //import {Component, create, getHelper,Vue, Store,Lifecycle, Prop,p }  from '../ext'
-import { Component, Inject, Model, Prop, Vue,Watch  } from 'vue-property-decorator'
+import { Component, Inject, Model, Prop, Vue,Watch  } from '../ext1' //'vue-property-decorator'
 import 'bootstrap'
 
 @Component({  components:{ navbar  } 
@@ -71,7 +71,7 @@ export default class App extends Vue {
   //example of manipulating central store values
  mounted() {
        //here you show the alert
-       console.log('app mounted')       
+       console.log('app mounted , store dateformat:'+this.vars.dateformat);       
     }
 } 
  </script>

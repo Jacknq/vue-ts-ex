@@ -2,7 +2,7 @@
 import { Component, Inject, Model, Prop, Watch  } from 'vue-property-decorator'
 export { Component, Inject, Model, Prop, Watch  } from 'vue-property-decorator'
 //import Vue from 'vue'
-import   store   from './System/store'
+import   store ,{storeData}  from './System/store'
 declare var require: any
 import  VueRouter from 'vue-router';
 import axio, { AxiosRequestConfig, AxiosPromise } from 'axios';
@@ -36,7 +36,7 @@ declare module 'vue/types/options' {
 //declare module "Vue" {
   export class Vue extends b.Vue {
     $v:any;
-    get vars () {
+    get vars ():storeData {
       return store.state.vars
     }
   //@Store setvars = commit('varsset')  
