@@ -2,6 +2,7 @@
   <div >
    
     <h1> {{ mess }}</h1>
+    <h1>counter is {{ vars.count }}</h1>
     <h1> test</h1>
      <button @click='test' >test </button>
      <router-link :to="'/test/1'" class="">link</router-link>
