@@ -36,6 +36,9 @@ declare module 'vue/types/options' {
 //declare module "Vue" {
   export class Vue extends b.Vue {
     $v:any;
+    get sstore () {
+      return store;
+    }
     get vars ():storeData {
       return store.state.vars
     }

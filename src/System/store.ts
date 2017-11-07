@@ -45,8 +45,14 @@ const statee:State = {
                  state:statee,
                   mutations: {
                    setvars (state, s:storeData) {
-                      state.vars = s; storage.setItem(storage.C_ENV_KEY, s)
-                   }
+                      state.vars = s; //storage.setItem(storage.C_ENV_KEY, s)
+                   },
+                   increment(state){
+                    state.vars.count++;
+                  },
+                  decrement(state){
+                   state.vars.count--;
+                 }
                   
                   }
                })
@@ -56,6 +62,7 @@ const statee:State = {
     //    {console.log('subscribed');}
     //  })    
      store.subscribe((mutate,  statee ) => {
+      storage.setItem(storage.C_ENV_KEY, statee);
       if(mutate.type=='setvars')
       {console.log('subscribed muttate');}
     })     

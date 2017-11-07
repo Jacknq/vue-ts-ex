@@ -5,6 +5,8 @@
     <h1>counter is {{ vars.count }}</h1>
     <h1> test</h1>
      <button @click='test' >test </button>
+     <button @click='increment' >++ </button>
+     <button @click='decrement' >-- </button>
      <router-link :to="'/test/1'" class="">link</router-link>
      <router-link :to="'/test'" class="">link</router-link>
   </div>
@@ -43,6 +45,15 @@ export default class extends Vue {
     created() { 
     this.mess = ' tst created';
     console.log('tst created');
+  }
+
+  increment()
+  {
+    this.sstore.commit('increment');
+  }
+  decrement()
+  {
+    this.sstore.commit('decrement');
   }
   
 } 
