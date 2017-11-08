@@ -1,4 +1,4 @@
-# xbVue
+# vue-ts-ex
 
 #  Vue2+ + TypeScript2+ example 
  All-in Corporate vue typescript template with single file component, hot reload, bootstrap 4,  webpack , express server, 
