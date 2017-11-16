@@ -2,7 +2,7 @@
 
 #  Vue2+ + TypeScript2+ example 
  All-in Corporate vue typescript example with single file component, hot reload, bootstrap 4,  webpack , express server, 
- boostrap, multiselect with search,
+ bootstrap, multiselect with search,
  local storage, router, pre-compiled templates all out of the box! Lets Rock!
  
  Based on official templates in js ported to ts: 
