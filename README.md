@@ -20,6 +20,8 @@ It is highly recommended that the following extensions are installed
 ![screenshoot](capture.PNG)
 ## Build Setup
 
+install node js
+https://nodejs.org/en/
 ``` cmd
 # install dependencies
 npm install
