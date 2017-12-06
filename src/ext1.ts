@@ -4,17 +4,12 @@ export { Component, Inject, Model, Prop, Watch } from "vue-property-decorator";
 import store, { storeData } from "./System/store";
 declare var require: any;
 import VueRouter from "vue-router";
-import axio, { AxiosRequestConfig, AxiosPromise } from "axios";
+//import axio, { AxiosRequestConfig, AxiosPromise } from "axios";
 //import moment from moment
 
 import * as b from "./ext";
 b.Vue.use(VueRouter);
 
-declare module "vue/types/options" {
-  interface ComponentOptions<V extends b.Vue> {
-    validations?: {}; //; validations () {};
-  }
-}
 
 export class Vue extends b.Vue {
   $v: any;
@@ -42,3 +37,9 @@ export class Vue extends b.Vue {
 //     return  moment(val).format(v.vars.dateformat);
 // return '';
 // })
+
+// declare module "vue/types/options" {
+//   interface ComponentOptions<V extends b.Vue> {
+//     validations?: {}; //; validations () {};
+//   }
+// }
