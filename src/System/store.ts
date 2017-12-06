@@ -1,5 +1,7 @@
 import Vue from "vue";
 import { StorageService } from "./localstorage";
+import Vuex from "vuex";
+Vue.use(Vuex);
 
 interface Oauth {
   data: object;
@@ -37,10 +39,8 @@ const dstate: storeData = {
 const storage = new StorageService();
 //save store in localstorage initialy if doesnt exist yet
 storage.setItemInit(storage.C_ENV_KEY, dstate);
-
 const storeData: storeData = JSON.parse(storage.getItem(storage.C_ENV_KEY));
-import Vuex from "vuex";
-Vue.use(Vuex);
+
 //playing around with vuex,
 export interface State {
   vars: storeData;
@@ -72,5 +72,4 @@ store.subscribe((mutate, statee) => {
 });
 
 //END COMpound store
-
 export default store;
