@@ -13,7 +13,7 @@ export interface storeData {
   location: string;
   token: string;
   servurl: string;
-  dateformat: string; //, db:cl.SgnRCloud
+  dateformat: string; 
   oauth: Oauth;
 }
 //you may need to store backend url somewhere
@@ -48,7 +48,7 @@ export interface State {
 // you can have multiple slots in state, some types you have outside existing store
 const statee: State = {
   vars: storeData
-}; //if your store gets big you can separate it into several files
+}; //if your store gets big ofcourse you can separate it into several files
 const store = new Vuex.Store({
   state: statee,
   mutations: {
