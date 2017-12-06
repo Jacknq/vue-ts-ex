@@ -39,7 +39,9 @@ export default class extends Vue {
  
    mounted() {
    console.log('tst mounted and'+ this.mess);
-   //this.mess
+   //if you go over dollar its typed as any
+   // this.$store.state.
+   //this.sstore  //this guy is typed
    }
 
     created() { 
