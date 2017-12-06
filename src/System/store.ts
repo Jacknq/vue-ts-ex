@@ -31,7 +31,7 @@ const storage = new StorageService();
 const storeData : storeData = JSON.parse(storage.getItem(storage.C_ENV_KEY));
   import Vuex from 'vuex'
    Vue.use(Vuex);
-//playing around with vuex
+//playing around with vuex, you can have multiple slots in state
 export interface State {
  
   vars:storeData
