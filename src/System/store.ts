@@ -31,36 +31,32 @@ const storage = new StorageService();
 const storeData : storeData = JSON.parse(storage.getItem(storage.C_ENV_KEY));
   import Vuex from 'vuex'
    Vue.use(Vuex);
-//playing around with vuex, you can have multiple slots in state
+//playing around with vuex,
 export interface State {
  
   vars:storeData
 }
+// you can have multiple slots in state, some types you have outside existing store
 const statee:State = {
 
   vars:storeData
 }
-               const store =  new Vuex.Store({
-               
-                 state:statee,
-                  mutations: {
-                   setvars (state, s:storeData) {
-                      state.vars = s; //storage.setItem(storage.C_ENV_KEY, s)
-                   },
-                   increment(state){
-                    state.vars.count++;
-                  },
-                  decrement(state){
-                   state.vars.count--;
-                 }
-                  
-                  }
-               })
-
-    //  store.subscribe(s => {
-    //    if(s.type=='setvars')
-    //    {console.log('subscribed');}
-    //  })    
+const store =  new Vuex.Store({
+  state:statee,
+  mutations: {
+    setvars (state, s:storeData) {
+      state.vars = s; //storage.setItem(storage.C_ENV_KEY, s)
+    },
+    increment(state){
+    state.vars.count++;
+  },
+  decrement(state){
+    state.vars.count--;
+  }
+  
+  }
+})
+   
      store.subscribe((mutate,  statee ) => {
       storage.setItem(storage.C_ENV_KEY, statee);
       if(mutate.type=='setvars')
