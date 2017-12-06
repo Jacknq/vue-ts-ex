@@ -15,7 +15,7 @@ export interface storeData {
   location: string;
   token: string;
   servurl: string;
-  dateformat: string; 
+  dateformat: string;
   oauth: Oauth;
 }
 //you may need to store backend url somewhere
