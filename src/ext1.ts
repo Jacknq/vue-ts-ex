@@ -5,7 +5,7 @@ import store, { storeData } from "./System/store";
 declare var require: any;
 import VueRouter from "vue-router";
 import axio, { AxiosRequestConfig, AxiosPromise } from "axios";
-var moment = require("moment");
+//import moment from moment
 
 import * as b from "./ext";
 b.Vue.use(VueRouter);
