@@ -10,7 +10,7 @@ import VueRouter from "vue-router";
 import * as b from "./ext";
 b.Vue.use(VueRouter);
 
-
+//extending default vue instance with some more stuff
 export class Vue extends b.Vue {
   $v: any;
   get sstore() {
