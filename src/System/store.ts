@@ -48,7 +48,7 @@ export interface State {
 
 // you can have multiple slots in state, some types you have outside existing store
 const state: State = {
-  vars: storeData //this variable is picked up from  localstorage 
+  vars: storeData //this variable is picked up from  localstorage, you may not want every variable there
 };
 
 const mutations: MutationTree<State> = {
