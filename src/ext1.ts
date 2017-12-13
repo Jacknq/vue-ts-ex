@@ -13,8 +13,8 @@ b.Vue.use(VueRouter);
 //extending default vue instance with some more stuff
 export class Vue extends b.Vue {
   $v: any;
-  get sstore() {
-    return store;
+  get sstore() {//overriding default to get type intellisense
+    return store; 
   }
   get vars(): storeData {
     return store.state.vars;
