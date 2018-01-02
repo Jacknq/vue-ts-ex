@@ -16,7 +16,7 @@ export class Vue extends b.Vue {
   $v: any;
  // $store : State;
   get vars(): storeData {
-    return this.$store.state.vars;
+    return this.$storets.state.vars;
   }
   //creating extra property with typed store
   get $storets()
