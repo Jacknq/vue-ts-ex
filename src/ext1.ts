@@ -1,7 +1,7 @@
 import { Component, Inject, Model, Prop, Watch } from "vue-property-decorator";
 export { Component, Inject, Model, Prop, Watch } from "vue-property-decorator";
 //import Vue from 'vue'
-import store, { storeData } from "./System/store";
+import store, { storeData, State } from "./System/store";
 declare var require: any;
 import VueRouter from "vue-router";
 //import axio, { AxiosRequestConfig, AxiosPromise } from "axios";
@@ -13,11 +13,9 @@ b.Vue.use(VueRouter);
 //extending default vue instance with some more stuff
 export class Vue extends b.Vue {
   $v: any;
-  get sstore() {//overriding default to get type intellisense
-    return store; 
-  }
+ 
   get vars(): storeData {
-    return store.state.vars;
+    return this.$store.state.vars;
   }
 
   public log(val: String) {

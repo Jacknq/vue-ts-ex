@@ -51,11 +51,11 @@ export default class extends Vue {
 
   increment()
   {
-    this.sstore.commit('increment');
+    this.$store.commit('increment');
   }
   decrement()
   {
-    this.sstore.commit('decrement');
+    this.$store.commit('decrement');
   }
   
 } 
