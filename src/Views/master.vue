@@ -1,7 +1,4 @@
 <template>
-
-
-
        <div class="site-wrapper">
 
       <div class="site-wrapper-inner">
@@ -55,28 +52,27 @@
 
 </template>
 <script lang="ts">
-import  navbar from '../components/navbar.vue'
-import  store  from '../System/store'
+import navbar from "../components/navbar.vue";
+import store from "../System/store";
 //import {Component, create, getHelper,Vue, Store,Lifecycle, Prop,p }  from '../ext'
-import { Component, Inject, Model, Prop, Vue,Watch  } from '../ext1' //'vue-property-decorator'
-import 'bootstrap'
+import { Component, Inject, Model, Prop, Vue, Watch } from "../ext1"; //'vue-property-decorator'
+import "bootstrap";
 
-@Component({  components:{ navbar  } 
-
- }) //,separatets, about , Bootstrap
+@Component({
+  components: { navbar }
+}) //,separatets, about , Bootstrap
 export default class App extends Vue {
-  name = 'App'
-  loc = 'at';
-  @Prop() someprop :Number;
+  name = "App";
+  loc = "at";
+  @Prop() someprop: Number;
   //example of manipulating central store values
- mounted() {
-       //here you show the alert
-       console.log('app mounted , store dateformat:'+this.vars.dateformat);       
-    }
-} 
- </script>
+  mounted() {
+    //here you show the alert
+    console.log("app mounted , store dateformat:" + this.vars.dateformat);
+  }
+}
+</script>
 <style lang="less" >
-
 /*
  * Globals
  */
@@ -95,11 +91,13 @@ a:hover {
   color: #333;
   text-shadow: none; /* Prevent inheritance from `body` */
   background-color: #fff;
-  border: .05rem solid #fff;
+  border: 0.05rem solid #fff;
 }
 
-.nav-link{  padding-left:10px; padding-right:10px; }
-
+.nav-link {
+  padding-left: 10px;
+  padding-right: 10px;
+}
 
 /*
  * Base structure
@@ -113,7 +111,7 @@ body {
 body {
   color: #fff;
   text-align: center;
-  text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -122,8 +120,8 @@ body {
   width: 100%;
   height: 100%; /* For at least Firefox */
   min-height: 100%;
-  -webkit-box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
-          box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
+  -webkit-box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
 }
 .site-wrapper-inner {
   display: table-cell;
@@ -139,7 +137,6 @@ body {
   padding: 2rem;
 }
 
-
 /*
  * Header
  */
@@ -153,16 +150,16 @@ body {
 }
 
 .nav-masthead .nav-link {
-  padding: .25rem 0;
+  padding: 0.25rem 0;
   font-weight: bold;
-  color: rgba(255,255,255,.5);
+  color: rgba(255, 255, 255, 0.5);
   background-color: transparent;
-  border-bottom: .25rem solid transparent;
+  border-bottom: 0.25rem solid transparent;
 }
 
 .nav-masthead .nav-link:hover,
 .nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255,255,255,.25);
+  border-bottom-color: rgba(255, 255, 255, 0.25);
 }
 
 .nav-masthead .nav-link + .nav-link {
@@ -183,7 +180,6 @@ body {
   }
 }
 
-
 /*
  * Cover
  */
@@ -192,19 +188,17 @@ body {
   padding: 0 1.5rem;
 }
 .cover .btn-lg {
-  padding: .75rem 1.25rem;
+  padding: 0.75rem 1.25rem;
   font-weight: bold;
 }
-
 
 /*
  * Footer
  */
 
 .mastfoot {
-  color: rgba(255,255,255,.5);
+  color: rgba(255, 255, 255, 0.5);
 }
-
 
 /*
  * Affix and center
@@ -239,5 +233,4 @@ body {
     width: 42rem;
   }
 }
-
 </style>
