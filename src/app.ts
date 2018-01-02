@@ -14,8 +14,8 @@ Vue.config.devtools = true; //enable debug for build
 let appl = new Vue({
   el: "#app",
   router: router,
-  components: { App: App },
   store: store ,
+  components: { App: App },  
   render: h => h("App"),
   //validations:{},
   methods: {
