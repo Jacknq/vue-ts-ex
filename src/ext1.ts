@@ -14,7 +14,7 @@ b.Vue.use(VueRouter);
 //extending default vue instance with some more stuff
 export class Vue extends b.Vue {
   $v: any;
- //you either do this, ts will know what type of store is, or you make extra computed property
+ //you either do this, ts will know what type of store there is, or you make extra computed property
  // $store = store;
   get vars(): storeData {
     return this.$storets.state.vars;
