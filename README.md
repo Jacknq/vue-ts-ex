@@ -12,7 +12,7 @@
  `vue-class-component`
 
 ### Visual Studio integration
-##### VS Code - C# extension, vetur plugin for vue files
+##### VS Code -  vetur plugin for vue files, optionaly C# extension
 ##### VS2017 - node js window present, or any extension
 ##### VS2015 - It is highly recommended that the following extensions are installed
 - [NPM Task Runner](https://visualstudiogallery.msdn.microsoft.com/8f2f2cbc-4da5-43ba-9de2-c9d08ade4941) (VS2017 compatible)
