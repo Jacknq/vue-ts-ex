@@ -61,8 +61,8 @@ import "bootstrap";
 @Component({
   components: { navbar }
 }) //,separatets, about , Bootstrap
-export default class App extends Vue {
-  name = "App";
+export default class master extends Vue {
+  name = "master";
   loc = "at";
   @Prop() someprop: Number;
   //example of manipulating central store values
