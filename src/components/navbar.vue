@@ -29,7 +29,7 @@
     </nav>
 </template>
 <script lang="ts">
-    import { Component, Vue, Prop, Watch } from '../ext'
+    import { Component, Vue, Prop, Watch } from "vue-property-decorator"
 
     var multiselect = require('vue-multiselect').default;
     class Link {

@@ -1,4 +1,4 @@
-import { Component, Vue } from '../ext'
+import { Component, Vue } from "vue-property-decorator"
 import { RouterOptions, Location, RouteConfig, Route } from 'vue-router'
 import  VueRouter from 'vue-router'
 //import './vendor' //bootstrap

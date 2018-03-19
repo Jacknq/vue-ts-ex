@@ -8,7 +8,7 @@ import {Store} from "vuex";
 //import axio, { AxiosRequestConfig, AxiosPromise } from "axios";
 //import moment from moment
 
-import * as b from "./ext";
+import * as b from "vue-property-decorator";
 b.Vue.use(VueRouter);
 
 //extending default vue instance with some more stuff
