@@ -17,7 +17,7 @@ declare var require: any
 //var separatets = require( '../Views/separatets.vue').default
 import separatets from  '../Views/separatets.vue'
 import about from '../Views/about.vue'
-import home from '../Views/test.vue'
+import home from '../Views/home.vue'
 var test = home 
 
 
