@@ -16,11 +16,7 @@
                     </li>
                 </ul>
                 <form class="form-inline float-lg-right">
-                    <!--<multiselect
-       v-bind:selected="selected"
-       v-bind:options="options" :showLabels="false" :searchable='false' :allowEmpty='false'
-      @select="updateSelected">
-    </multiselect>-->
+               
                     <input class="form-control" type="text" placeholder="Search">
                     <button class="btn btn-outline-success" type="submit"><i class="fa fa-search"></i> Search</button>
                 </form>
@@ -30,28 +26,15 @@
 </template>
 <script lang="ts">
     import { Component, Vue, Prop, Watch } from "vue-property-decorator"
-
-    var multiselect = require('vue-multiselect').default;
+    
     class Link {
         name: string;
         public path: string; constructor(name: string, path: string) { this.name = name; this.path = path; }
     }
-    @Component({
-        components: { multiselect: multiselect }  //multiselect:Multiselect 
-        // watch:{ '$route.path': function(newVal?:any, oldVal?:any ){ // this.$route.path:string , newVal?:any, oldVal?:any 
-        //      if(this.$route.path!=undefined)
-        //      console.log('Changed current path to: ' + this.$route.path);
-        //  } } 
-    })
-    export default class navbar extends Vue {
-        someprop = 'test'
+    @Component({   })
+    export default class navbar extends Vue {       
         expanded: boolean = false;
-
         selected: string = null;
-        //options:string[] = ['polo', 'trans', 'golf'];   
-
-
-        someother = 'seomesome'
         object: { default: string } = { default: 'Default object property!' }; //objects as default values don't need to be wrapped into functions
         links = [
             new Link('Home', '/'),

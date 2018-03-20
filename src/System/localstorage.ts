@@ -83,14 +83,6 @@ module ft {
 
     export class LocalStorageService {
         // TODO: Need to handle QUOTA_EXCEEDED_ERR
-
-      //  public static $inject = [
-      //      "$log"
-      //  ];
-
-      //  constructor(private $log: ng.ILogService) {
-      //  }
-
         read(path: string): any {
             // if not in local storage, the string "undefined" is returned (why???)
             var text: string = localStorage.getItem(path);
