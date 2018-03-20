@@ -4,12 +4,9 @@
    </div>
 </template>
 <script lang="ts">
-    import { Component, create, getHelper, Vue, Store, Prop, Watch } from '../ext1'
+    import { Component, Vue, Prop, Watch } from '../ext1'
 
-    var multiselect = require('vue-multiselect').default;
- 
-    @Component({
-        components: { multiselect: multiselect }  //multiselect:Multiselect 
+    @Component({       
     name: 'compname'
     })
     export default class extends Vue {  
