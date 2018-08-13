@@ -18,6 +18,9 @@
 - [NPM Task Runner](https://visualstudiogallery.msdn.microsoft.com/8f2f2cbc-4da5-43ba-9de2-c9d08ade4941) (VS2017 compatible)
 - [Vue.js Pack](https://visualstudiogallery.msdn.microsoft.com/30fd019a-7b90-4f75-bb54-b8f49f18fbe1)
 ![screenshoot](capture.PNG)
+Starting a new project? Great! Start with :
+http://cli.vuejs.org/
+try *Vue UI* with *typescript* option.
 ## Build Setup
 
 install node js
