@@ -54,8 +54,9 @@
 <script lang="ts">
 import navbar from "@/components/navbar.vue";
 import store from "System/store";
-//import {Component, create, getHelper,Vue, Store,Lifecycle, Prop,p }  from '../ext'
-import { Component, Inject, Model, Prop, Vue, Watch } from "ext1"; //'vue-property-decorator'
+
+import { Component, Inject, Model, Prop, Vue, Watch } from "ext1"; 
+//extending default vue instance with special features, aka good tactics via inheritance
 import "bootstrap";
 
 @Component({
