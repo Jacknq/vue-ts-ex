@@ -76,6 +76,10 @@ export default class master extends Vue {
 /*
  * Globals
  */
+body {
+  color: white !important;
+  background-color: #333 !important;
+}
 
 /* Links */
 a,
