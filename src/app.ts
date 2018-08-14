@@ -1,5 +1,6 @@
 declare var require: any;
-
+//require('es6-promise').polyfill();
+import 'es6-promise/auto';
 import { Component, Vue } from "./ext1";
 import { RouterOptions, Location, RouteConfig, Route } from "vue-router";
 import VueRouter from "vue-router";
