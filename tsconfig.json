@@ -12,7 +12,18 @@
    , "noImplicitAny": false,    
     "strict": false,   
     "suppressImplicitAnyIndexErrors": true,
-    "removeComments": true
+    "removeComments": true,
+    "baseUrl": "src", // This must be specified if "paths" is.
+    "paths": {
+      
+      "@/*": [
+        "src/*"
+      ],
+     
+      "ext1": [
+        "ext1"
+      ],
+    }
   },
   "exclude": [
     "./node_modules"

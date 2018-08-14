@@ -52,10 +52,10 @@
 
 </template>
 <script lang="ts">
-import navbar from "../components/navbar.vue";
-import store from "../System/store";
+import navbar from "@/components/navbar.vue";
+import store from "System/store";
 //import {Component, create, getHelper,Vue, Store,Lifecycle, Prop,p }  from '../ext'
-import { Component, Inject, Model, Prop, Vue, Watch } from "../ext1"; //'vue-property-decorator'
+import { Component, Inject, Model, Prop, Vue, Watch } from "ext1"; //'vue-property-decorator'
 import "bootstrap";
 
 @Component({

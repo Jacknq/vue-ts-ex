@@ -4,6 +4,7 @@ const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
 var webpack = require('webpack')
+var vueloader = require('vue-loader')
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -29,6 +30,9 @@ module.exports = {
       'components': path.resolve(__dirname, '../src/components'),
       'vue$': 'vue/dist/vue.esm.js',      
       '@': resolve('src'),
+      'System': path.resolve(__dirname, '../src/System'),
+      'Views': path.resolve(__dirname, '../src/Views'),
+      'ext1': path.resolve(__dirname, '../src/ext1')
     }
   },
   module: {
@@ -80,6 +84,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new vueloader.VueLoaderPlugin(),
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery",

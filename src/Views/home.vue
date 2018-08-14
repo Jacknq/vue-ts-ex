@@ -17,7 +17,7 @@
 
 //import { Component,  prop, watch } from 'vue-class-decorators';
 import { RouterOptions, Location, RouteConfig, Route } from 'vue-router'
-import { Component, Inject, Model, Prop, Vue,Watch  } from './../ext1'
+import { Component, Inject, Model, Prop, Vue,Watch  } from "ext1"
 
 @Component({ name:"test" })  //alternatively you put class name
 export default class extends Vue {
