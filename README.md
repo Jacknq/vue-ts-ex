@@ -1,7 +1,7 @@
 # vue-ts-ex
 
 #  Vue2+ + TypeScript2+ example 
- All-in Corporate vue typescript example with single file component, hot reload, bootstrap 4,  webpack , express server, 
+ All-in vue typescript example with single file component, hot reload, bootstrap 4,  webpack , express server, 
  bootstrap, multiselect with search,
  local storage, router, pre-compiled templates all out of the box! Lets Rock!
  
