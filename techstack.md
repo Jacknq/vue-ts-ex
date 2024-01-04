@@ -1,7 +1,8 @@
 <!--
---- Readme.md Snippet without images Start ---
+&lt;--- Readme.md Snippet without images Start ---&gt;
 ## Tech Stack
 Jacknq/vue-ts-ex is built on the following main stack:
+
 - [Node.js](http://nodejs.org/) – Frameworks (Full Stack)
 - [.NET](http://www.microsoft.com/net/) – Frameworks (Full Stack)
 - [jQuery](http://jquery.com/) – Javascript UI Libraries
@@ -26,11 +27,13 @@ Jacknq/vue-ts-ex is built on the following main stack:
 - [Prism](https://prismjs.com/) – Javascript Utilities & Libraries
 
 Full tech stack [here](/techstack.md)
---- Readme.md Snippet without images End ---
 
---- Readme.md Snippet with images Start ---
+&lt;--- Readme.md Snippet without images End ---&gt;
+
+&lt;--- Readme.md Snippet with images Start ---&gt;
 ## Tech Stack
 Jacknq/vue-ts-ex is built on the following main stack:
+
 - <img width='25' height='25' src='https://img.stackshare.io/service/1011/n1JRsFeB_400x400.png' alt='Node.js'/> [Node.js](http://nodejs.org/) – Frameworks (Full Stack)
 - <img width='25' height='25' src='https://img.stackshare.io/service/1014/IoPy1dce_400x400.png' alt='.NET'/> [.NET](http://www.microsoft.com/net/) – Frameworks (Full Stack)
 - <img width='25' height='25' src='https://img.stackshare.io/service/1021/lxEKmMnB_400x400.jpg' alt='jQuery'/> [jQuery](http://jquery.com/) – Javascript UI Libraries
@@ -55,14 +58,15 @@ Jacknq/vue-ts-ex is built on the following main stack:
 - <img width='25' height='25' src='https://img.stackshare.io/service/10010/Screen_Shot_2012-07-31_at_21.57.03__400x400.png' alt='Prism'/> [Prism](https://prismjs.com/) – Javascript Utilities & Libraries
 
 Full tech stack [here](/techstack.md)
---- Readme.md Snippet with images End ---
+
+&lt;--- Readme.md Snippet with images End ---&gt;
 -->
 <div align="center">
 
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [Jacknq/vue-ts-ex](https://github.com/Jacknq/vue-ts-ex)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|112<br/>Tools used|11/09/23 <br/>Report generated|
+|112<br/>Tools used|01/04/24 <br/>Report generated|
 |------|------|
 </div>
 
@@ -323,7 +327,7 @@ Full tech stack [here](/techstack.md)
 |[body-parser](https://www.npmjs.com/body-parser)|v1.17.1|10/17/17|Jack85 |MIT|N/A|
 |[bootstrap-vue](https://www.npmjs.com/bootstrap-vue)|v0.11.0|10/17/17|Jack85 |MIT|[](https://github.com/advisories/GHSA-c7pp-x73h-4m2v) (High)|
 |[browserslist](https://www.npmjs.com/browserslist)|v1.5.2|10/17/17|Jack85 |MIT|N/A|
-|[chromedriver](https://www.npmjs.com/chromedriver)|v2.21.2|11/30/16|Jack85 |Apache-2.0|[CVE-2016-10579](https://github.com/advisories/GHSA-jh5w-6964-x5cf) (High)|
+|[chromedriver](https://www.npmjs.com/chromedriver)|v2.21.2|11/30/16|Jack85 |Apache-2.0|[CVE-2016-10579](https://github.com/advisories/GHSA-jh5w-6964-x5cf) (High)<br/>[CVE-2023-26156](https://github.com/advisories/GHSA-hm92-vgmw-qfmx) (Moderate)|
 |[connect-history-api-fallback](https://www.npmjs.com/connect-history-api-fallback)|v1.1.0|10/17/17|Jack85 |MIT|N/A|
 |[copy-webpack-plugin](https://www.npmjs.com/copy-webpack-plugin)|v4.0.1|08/14/18|Jack Daniels |MIT|N/A|
 |[core-js](https://www.npmjs.com/core-js)|v2.4.1|10/17/17|Jack85 |MIT|N/A|
@@ -393,4 +397,4 @@ Full tech stack [here](/techstack.md)
 <br/>
 <div align='center'>
 
-Generated via [Stack File](https://github.com/apps/stack-file)
+Generated via [Stack File](https://github.com/marketplace/stack-file)
