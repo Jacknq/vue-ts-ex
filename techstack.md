@@ -66,7 +66,7 @@ Full tech stack [here](/techstack.md)
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [Jacknq/vue-ts-ex](https://github.com/Jacknq/vue-ts-ex)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|112<br/>Tools used|01/04/24 <br/>Report generated|
+|112<br/>Tools used|01/05/24 <br/>Report generated|
 |------|------|
 </div>
 
